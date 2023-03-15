@@ -8,7 +8,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>This is the App component</h1>
+      <h2>This is the HomePage component</h2>
     </div>
   )
 }

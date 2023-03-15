@@ -6,14 +6,14 @@ export default function Header() {
 
 
   return (
-    <div className="header">
+    <div>
       <h1>Daggett Control Company, LLC</h1>
       <h3>Industrial Controls & Consulting</h3>
 
-      <nav className="navbar">
+      <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/testimonials">Testimonials</NavLink>
+        <NavLink to="/about">About Us</NavLink>
+        <NavLink to="/products">Products</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
       </nav>
     </div>

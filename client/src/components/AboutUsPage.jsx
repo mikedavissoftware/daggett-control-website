@@ -8,7 +8,7 @@ export default function AboutUsPage() {
 
   return (
     <div>
-      <h1>This is the AboutUsPage component</h1>
+      <h2>This is the AboutUsPage component</h2>
     </div>
   )
 }
