@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <div>
-      <h1>Daggett Control Company, LLC</h1>
+      <h1 className="text-5xl">Daggett Control Company, LLC</h1>
       <h3>Industrial Controls & Consulting</h3>
 
       <nav>

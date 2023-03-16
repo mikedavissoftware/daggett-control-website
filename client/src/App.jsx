@@ -16,7 +16,7 @@ export default function App() {
     <div>
       <Header />
 
-      <h1>This is the App component</h1>
+      <h2 className="text-3xl">This is the App component</h2>
 
       <Switch>
         <Route exact path="/">

@@ -36,11 +36,10 @@ a:hover {
 body {
   /* display: flex; */
   place-items: center;
-  margin-left: auto;
-  margin-right: auto;
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
+  margin: 20px;
 }
 
 h1 {
