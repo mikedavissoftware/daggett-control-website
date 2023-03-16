@@ -27,4 +27,6 @@ Front End (React with Vite.js):
 
 CSS Compiler (Tailwind):
 
+`cd client`
+
 `npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch`
