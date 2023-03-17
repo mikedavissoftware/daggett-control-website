@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_16_231940) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_17_192740) do
   create_table "company_infos", force: :cascade do |t|
     t.string "name"
     t.string "byline"
@@ -46,6 +46,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_231940) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_line_id"], name: "index_testimonials_on_product_line_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "testimonials", "product_lines"

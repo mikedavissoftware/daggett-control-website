@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :product_lines
   resources :testimonials
   resources :team_members

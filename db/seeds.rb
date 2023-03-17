@@ -11,20 +11,20 @@ CompanyInfo.create(
 # Create Team Members
 puts "Creating Team Members..."
 TeamMember.create(
-  name: "",
-  role: "",
-  bio: "",
-  website: "",
+  name: "Ron Daggett",
+  role: "Owner and Operator",
+  bio: "Ron Daggett has decades of experience in industrial controls, and has been an independent industrial control distributor and consultant for over a year now.",
+  website: "http://website.com",
 )
 TeamMember.create(
-  name: "",
+  name: "Stephanie Helfer",
   role: "",
   bio: "",
-  website: "",
+  website: "http://website.com",
 )
 TeamMember.create(
-  name: "",
-  role: "",
+  name: "Mike Davis",
+  role: "Web Developer & Tech Consultant",
   bio: "",
   website: "",
 )
