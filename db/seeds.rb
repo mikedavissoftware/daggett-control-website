@@ -1,11 +1,15 @@
 puts "Now seeding..."
 
+# Creat Admin User
+puts "Creating Users..."
+User.create(username: "admin", password_digest: "123")
+
 # Create Company
 puts "Creating Company..."
 CompanyInfo.create(
   name: "Daggett Control Company, LLC",
   byline: Faker::Company.catch_phrase,
-  bio: Faker::Lorem.paragraph(sentences: 8)
+  bio: Faker::Lorem.paragraph(sentence_count: 8)
 )
 
 # Create Team Members
@@ -13,20 +17,20 @@ puts "Creating Team Members..."
 TeamMember.create(
   name: "Ron Daggett",
   role: "Owner and Operator",
-  bio: "Ron Daggett has decades of experience in industrial controls, and has been an independent industrial control distributor and consultant for over a year now.",
-  website: "http://website.com",
+  bio: "Ron Daggett has decades of experience in industrial controls, and has been an independent industrial control distributor. Ron values customers highly, going above and beyond in providing expertise & guidance to clients.",
+  website: "",
 )
 TeamMember.create(
   name: "Stephanie Helfer",
-  role: "",
+  role: "Administrator",
   bio: "",
-  website: "http://website.com",
+  website: "",
 )
 TeamMember.create(
   name: "Mike Davis",
   role: "Web Developer & Tech Consultant",
-  bio: "",
-  website: "",
+  bio: "Mike is a web developer, multimedia producer, and ethical entrepreneur. With many years of experience in technical project management & event production, he brings a tech savviness to Daggett Control that ensures smooth, efficient operation.",
+  website: "http://mikedavissoftware.com",
 )
 
 # Create Product Lines
@@ -36,7 +40,7 @@ product_amount.times do
   ProductLine.create(
     company: Faker::Company.name,
     logo: Faker::Company.logo,
-    description: Faker::Lorem.paragraph(sentences: 3),
+    description: Faker::Lorem.paragraph(sentence_count: 3),
     website: "https://en.wikipedia.org/wiki/Company"
   )
 end
@@ -45,10 +49,12 @@ puts "Creating Testimonials..."
 testimonial_amount = product_amount * 3
 testimonial_amount.times do
   Testimonial.create(
-    name: "",
-    content: "",
-    website: "",
-    image: "",
+    name: Faker::Name.name,
+    content: Faker::Lorem.paragraph(sentence_count: 3),
+    website: "http://website.com",
+    image: Faker::Avatar.image,
     product_line_id: rand(1..product_amount)
   )
 end
+
+puts "Seeding Finished!"

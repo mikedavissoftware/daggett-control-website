@@ -8,7 +8,7 @@ export default function Template() {
 
   return (
     <div>
-      <h1>This is the Template component</h1>
+      <h2 className="text-3xl">This is the Template component</h2>
     </div>
   )
 }
