@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   before_action :authorize
+  skip_forgery_protection
 
   def hello_world
     session[:count] = (session[:count] || 0) + 1
@@ -18,6 +19,7 @@ class ApplicationController < ActionController::Base
 
   def render_unprocessable_entity(exception)
     render json: {errors:exception.record.errors.full_messages}, status: :unprocessable_entity
+    puts "wtf"
   end
 
   def authorize

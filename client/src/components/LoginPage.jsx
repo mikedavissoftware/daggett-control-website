@@ -17,7 +17,8 @@ export default function LoginPage() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    fetch("/login", {
+    console.log(formData)
+    fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
