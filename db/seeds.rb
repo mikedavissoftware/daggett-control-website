@@ -2,7 +2,7 @@ puts "Now seeding..."
 
 # Creat Admin User
 puts "Creating Users..."
-User.create(username: "admin", password_digest: "123")
+User.create(username: "admin", password: "123")
 
 # Create Company
 puts "Creating Company..."

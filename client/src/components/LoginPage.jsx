@@ -1,13 +1,19 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
+export default function LoginPage({ user, setUser }) {
+  console.log(user)
 
-
-export default function LoginPage() {
   const [formData, setFormData] = useState({
     username: "",
     password: ""
   })
   const [errors, setErrors] = useState([])
+
+  const history = useHistory()
+  const redirect = () => {
+    history.push('/')
+  }
 
   function handleChange(e) {
     console.log(e.target.value)
@@ -18,7 +24,7 @@ export default function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch("http://localhost:3000/login", {
+    fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +32,7 @@ export default function LoginPage() {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((currentUser) => setCurrentUser(currentUser));
+        r.json().then((currentUser) => setUser(currentUser));
         redirect()
       } else {
         r.json().then((err) => setErrors(err.errors));
