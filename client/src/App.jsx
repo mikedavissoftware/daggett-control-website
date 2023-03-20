@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, createContext } from 'react'
 import { Switch, Route, Link } from "react-router-dom"
 
 import Header from "./components/Header"
@@ -11,13 +11,15 @@ import AccountPage from "./components/AccountPage"
 import LoginPage from "./components/LoginPage"
 import Footer from "./components/Footer"
 
+export const UserContext = createContext(null)
+
 
 export default function App() {
   const [user, setUser] = useState(null)
 
   return (
-    <div>
-      <Header user={user} setUser={setUser} />
+    <UserContext.Provider value={{ user, setUser }}>
+      <Header />
       
       {(user) ? (
         <Switch>
@@ -41,7 +43,7 @@ export default function App() {
       ) : (
         <>
         <Switch>
-          <Route path="/login">
+          <Route path="/">
             <LoginPage user={user} setUser={setUser} />
           </Route>
         </Switch>
@@ -49,6 +51,6 @@ export default function App() {
       )}
 
       <Footer />
-    </div>
+    </UserContext.Provider>
   )
 }

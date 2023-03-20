@@ -1,7 +1,13 @@
+import { useContext } from "react"
 import { NavLink, useHistory } from "react-router-dom"
 
+import { UserContext } from "../App"
+import Logo from "../assets/daggett-control-logo-1.png"
 
-export default function Header({ user, setUser }) {
+
+export default function Header() {
+  const {user, setUser} = useContext(UserContext)
+
   const history = useHistory()
   const loginRedirect = () => {
     history.push('/login')
@@ -19,6 +25,7 @@ export default function Header({ user, setUser }) {
 
   return (
     <div>
+      <img src={Logo} className="mx-auto w-3/4 drop-shadow-md-white"/>
       <h1 className="text-5xl">Daggett Control Company, LLC</h1>
       <h3>Industrial Controls & Consulting</h3>
 
