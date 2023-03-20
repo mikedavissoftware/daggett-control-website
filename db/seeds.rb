@@ -4,14 +4,6 @@ puts "Now seeding..."
 puts "Creating Users..."
 User.create(username: "admin", password: "123")
 
-# Create Company
-puts "Creating Company..."
-CompanyInfo.create(
-  name: "Daggett Control Company, LLC",
-  byline: Faker::Company.catch_phrase,
-  bio: Faker::Lorem.paragraph(sentence_count: 8)
-)
-
 # Create Team Members
 puts "Creating Team Members..."
 TeamMember.create(
