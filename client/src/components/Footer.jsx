@@ -39,10 +39,15 @@ export default function Footer() {
           <button onClick={loginRedirect}>Log In</button>
         )}
       </nav>
-
-      <img src={Logo} className="mx-auto w-1/2 drop-shadow-sm-white"/>
-      <h1 className="text-3xl">Daggett Control Company, LLC</h1>
-      <h3>Industrial Controls & Consulting</h3>
+      <div className="grid lg:grid-cols-2">
+        <div>
+          <img src={Logo} className="mx-auto w-1/2 lg:w-3/4 lg:ml-auto drop-shadow-sm-white"/>
+        </div>
+        <div className="lg:">
+          <h1 className="text-3xl lg:text-left">Daggett Control Company, LLC</h1>
+          <h3>Industrial Controls & Consulting</h3>
+        </div>
+      </div>
     </div>
   )
 }

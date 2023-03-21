@@ -28,7 +28,6 @@ export default function App() {
           </Route>
           <Route path="/about">
             <AboutUsPage />
-            <Testimonials />
           </Route>
           <Route path="/products">
             <ProductsPage />

@@ -1,20 +1,26 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 
+import TestimonialCard from "./TestimonialCard"
 
 
 export default function Testimonials() {
+  const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
     fetch("/api/testimonials")
     .then(r => r.json())
     .then(testimonialsData => {
-      console.log(testimonialsData)
+      setTestimonials(testimonialsData)
     })
+  }, [])
+
+  const testimonialComponents = testimonials.map((testimonial) => {
+    return <TestimonialCard key={testimonial.id} testimonial={testimonial} />
   })
 
   return (
     <div>
-      <h2>This is the Testimonials component</h2>
+      {testimonialComponents}
     </div>
   )
 }
