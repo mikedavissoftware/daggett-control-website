@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :team_members
   resources :users
   resources :product_lines
   resources :testimonials
-  resources :team_members
 
   get '/hello', to: 'application#hello_world'
 

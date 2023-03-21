@@ -5,6 +5,7 @@ class CreateTeamMembers < ActiveRecord::Migration[7.0]
       t.string :role
       t.text :bio
       t.string :website
+      t.string :image
 
       t.timestamps
     end

@@ -5,9 +5,11 @@ one:
   role: MyString
   bio: MyText
   website: MyString
+  image: MyString
 
 two:
   name: MyString
   role: MyString
   bio: MyText
   website: MyString
+  image: MyString

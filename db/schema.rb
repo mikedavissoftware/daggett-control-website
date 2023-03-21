@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_20_043858) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_21_200739) do
   create_table "product_lines", force: :cascade do |t|
     t.string "company"
     t.string "logo"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_20_043858) do
     t.string "role"
     t.text "bio"
     t.string "website"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
