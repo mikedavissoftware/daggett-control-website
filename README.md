@@ -11,11 +11,9 @@ This website will include these pages:
 - Our Services
 - Contact Us
 
+---
 
-
-<hr>
-
-### During development, start servers like so:
+## During development, start servers like so:
 
 Back End (Ruby on Rails):
 
@@ -30,3 +28,15 @@ CSS Compiler (Tailwind):
 `cd client`
 
 `npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch`
+
+---
+
+## Technologies Used
+
+### Image Upload with Active Storage
+
+[Great Breakdown](https://youtu.be/1cw6qO1EYGw)
+
+Build your resources (most importantly, the views):
+
+`rails g scaffold`

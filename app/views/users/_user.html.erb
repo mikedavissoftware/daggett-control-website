@@ -1,38 +1,44 @@
 <div id="<%= dom_id user %>">
   <p>
     <strong>Username:</strong>
+    <br/>
     <%= user.username %>
   </p>
 
   <p>
     <strong>Password digest:</strong>
+    <br/>
     <%= user.password_digest %>
   </p>
 
   <p>
     <strong>Name:</strong>
+    <br/>
     <%= user.name %>
   </p>
 
   <p>
     <strong>Role:</strong>
+    <br/>
     <%= user.role %>
   </p>
 
   <p>
     <strong>Bio:</strong>
+    <br/>
     <%= user.bio %>
   </p>
 
   <p>
     <strong>Website:</strong>
+    <br/>
     <%= user.website %>
   </p>
 
   <p>
     <strong>Image:</strong>
     <br/>
-    <%= image_tag(user.image) %>
+    <%= link_to image_tag(user.image_as_thumbnail), user.image if user.image.attached? %>
   </p>
 
 </div>
