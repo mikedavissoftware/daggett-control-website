@@ -11,11 +11,12 @@ import AccountPage from "./components/AccountPage"
 import LoginPage from "./components/LoginPage"
 import Footer from "./components/Footer"
 
-export const UserContext = createContext(null)
+export const UserContext = createContext()
 
 
 export default function App() {
   const [user, setUser] = useState(null)
+  console.log(user)
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
