@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "contact@daggettcontrol.com"
+  default from: "admin@daggettcontrol.com"
   layout "mailer"
 end
