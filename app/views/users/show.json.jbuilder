@@ -2,7 +2,14 @@
 
 json.user do
   json.id @user.id
+  json.username @user.username
+  json.password_digest @user.password_digest
   json.name @user.name
   json.role @user.role
-  json.image @user.image_as_thumbnail
+  json.bio @user.bio
+  json.website @user.website
+  if @user.image.attached?
+    json.image ("/api" + url_for(@user.image))
+    json.thumbnail ("/api" + url_for(@user.image_as_thumbnail))
+  end
 end

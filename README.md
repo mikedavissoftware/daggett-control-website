@@ -37,6 +37,8 @@ CSS Compiler (Tailwind):
 
 [Great Breakdown](https://youtu.be/1cw6qO1EYGw)
 
-Build your resources (most importantly, the views):
+[Active Storage Validator](https://github.com/aki77/activestorage-validator)
 
-`rails g scaffold`
+Custom ERB files
+
+JBuilder files for json output
