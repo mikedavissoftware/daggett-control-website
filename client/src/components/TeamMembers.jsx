@@ -7,13 +7,13 @@ export default function TeamMembers() {
   const [teamMembers, setTeamMembers] = useState([])
 
   useEffect(() => {
-    fetch("/api/team_members")
+    fetch("/api/users.json")
     .then(r => r.json())
     .then(teamMembersData => {
       setTeamMembers(teamMembersData)
     })
   }, [])
-  console.log(teamMembers)
+  // console.log(teamMembers)
 
   const teamMemberComponents = teamMembers.map((teamMember) => {
     return <TeamMemberCard key={teamMember.id} teamMember={teamMember} />
