@@ -11,6 +11,8 @@ This website will include these pages:
 - Our Services
 - Contact Us
 
+The code is viewable on the [Github Repo](https://github.com/mikedavissoftware/daggett-control-website)
+
 ---
 
 ## During development, start servers like so:
