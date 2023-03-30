@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :product_lines
   resources :testimonials
+  resources :contact_forms
 
   get '/hello', to: 'application#hello_world'
 

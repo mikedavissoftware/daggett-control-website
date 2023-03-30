@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contact forms</h1>
+
+<div id="contact_forms">
+  <% @contact_forms.each do |contact_form| %>
+    <%= render contact_form %>
+    <p>
+      <%= link_to "Show this contact form", contact_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New contact form", new_contact_form_path %>
