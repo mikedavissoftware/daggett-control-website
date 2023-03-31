@@ -36,3 +36,4 @@
 
 # Ignore environment variabls
 config/local_env.yml
+config/app_environment_variables.rb
