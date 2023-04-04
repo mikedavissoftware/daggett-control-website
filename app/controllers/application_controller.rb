@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     render json: { count: session[:count] }
   end
 
+  def database_home
+    render :template => "/home/home"
+  end
+
   private
 
   def render_not_found(exception)
@@ -19,7 +23,6 @@ class ApplicationController < ActionController::Base
 
   def render_unprocessable_entity(exception)
     render json: {errors:exception.record.errors.full_messages}, status: :unprocessable_entity
-    puts "wtf"
   end
 
   def authorize

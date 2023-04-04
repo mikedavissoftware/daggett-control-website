@@ -18,12 +18,12 @@
 
   <div>
     <%= form.label :password, style: "display: block" %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div>
     <%= form.label :password_confirmation, style: "display: block" %>
-    <%= form.text_field :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
   </div>
 
   <div>
@@ -52,6 +52,6 @@
   </div>
   <hr>
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit New User" %>
   </div>
 <% end %>

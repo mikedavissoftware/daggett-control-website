@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # root 'users#index'
+  # root 'application#hello_world'
+  root 'application#database_home'
 
   resources :users
   resources :product_lines

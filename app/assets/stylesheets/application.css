@@ -1,27 +1,104 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
 body {
-text-align: center;
+
+  /* text-align: center; */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-style: italic;
+}
+
+h4 {
+  color: red;
 }
 
 p {
-color:  rgb(200, 200, 200);
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #EEE;
+  border-radius: 6px;
+  /* width: fit-content; */
 }
 
-strong {
-  color: white;
+a {
+  padding: 10px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+img:hover {
+  opacity: 50%;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 10px;
+  border-top: 1px solid #545454;
+  background: #616161;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#616161));
+  background: -webkit-linear-gradient(top, #ffffff, #aaa);
+  background: -moz-linear-gradient(top, #ffffff, #aaa);
+  background: -ms-linear-gradient(top, #ffffff, #aaa);
+  background: -o-linear-gradient(top, #ffffff, #aaa);
+  padding: 6.5px 13px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: #000000;
+  font-size: 16px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.button:hover {
+  border-top-color: #171717;
+  background: #171717;
+  color: #fff;
+  filter: drop-shadow(2px 2px 4px rgb(65, 65, 65)); 
+}
+.button:active {
+  border-top-color: #595959;
+  background: #595959;
+  filter: drop-shadow(2px 2px 4px rgb(0, 0, 0)); 
 }
