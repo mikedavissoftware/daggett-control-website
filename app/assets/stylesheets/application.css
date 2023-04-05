@@ -65,7 +65,7 @@ img:hover {
   opacity: 50%;
 }
 
-.button {
+a:not(.link-exclude) {
   display: block;
   width: fit-content;
   margin: auto;
@@ -91,13 +91,13 @@ img:hover {
   text-decoration: none;
   vertical-align: middle;
 }
-.button:hover {
+a:not(.link-exclude):hover {
   border-top-color: #171717;
   background: #171717;
   color: #fff;
   filter: drop-shadow(2px 2px 4px rgb(65, 65, 65)); 
 }
-.button:active {
+a:not(.link-exclude):active {
   border-top-color: #595959;
   background: #595959;
   filter: drop-shadow(2px 2px 4px rgb(0, 0, 0)); 

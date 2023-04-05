@@ -20,7 +20,7 @@ export default function AccountPage() {
       <a href={`${apiDomain}/users`} target="_blank" >Edit Users</a>
       <br/>
 
-      <a href={`${apiDomain}/tesimonials`} target="_blank" >Edit Testimonials</a>
+      <a href={`${apiDomain}/testimonials`} target="_blank" >Edit Testimonials</a>
       <br/>
 
       <a href={`${apiDomain}/product_lines`} target="_blank" >Edit Product Lines</a>

@@ -46,7 +46,7 @@ testimonial_amount.times do
     name: Faker::Name.name,
     content: Faker::Lorem.paragraph(sentence_count: 3),
     website: "http://website.com",
-    image: Faker::Avatar.image,
+    # image: Faker::Avatar.image,
     product_line_id: rand(1..product_amount)
   )
 end

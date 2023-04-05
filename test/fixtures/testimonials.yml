@@ -4,12 +4,10 @@ one:
   name: MyString
   content: MyText
   website: MyString
-  image: MyString
   product_line: one
 
 two:
   name: MyString
   content: MyText
   website: MyString
-  image: MyString
   product_line: two

@@ -4,7 +4,7 @@
 
 <hr width="15%" />
 
-<%= link_to "Create a New User", new_user_path, :class => "button" %>
+<%= link_to "Create a New User", new_user_path %>
 
 <h2>...or Browse Your Users Below</h2>
 
@@ -13,7 +13,7 @@
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
-    <%= link_to "Show this user", user, :class => "button" %>
+    <%= link_to "Show this user", user %>
     <hr width="75%" />
   <% end %>
 </div>
