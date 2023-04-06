@@ -1,11 +1,10 @@
 <div>
-  <%= link_to "See All Users", users_path, :class => "button" %>
-</div>
-
-<div>
-  <%= link_to "See All Testimonials", testimonials_path, :class => "button" %>
-</div>
-
-<div>
-  <%= link_to "See All Product Lines", product_lines_path, :class => "button" %>
+  <nav>
+    <%= link_to "See All Users", users_path, :style => "display: inline-block;" %>
+    <%= link_to "See All Testimonials", testimonials_path, :style => "display: inline-block;" %>
+    <%= link_to "See All Product Lines", product_lines_path, :style => "display: inline-block;" %>
+    <% if @current_user %>
+      <%= link_to "My Account", @current_user, :style => "display: inline-block;" %>
+    <% end %>
+  </nav>
 </div>

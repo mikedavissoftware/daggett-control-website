@@ -1,6 +1,11 @@
 <div id="<%= dom_id user %>">
 
-  <h3><%= user.name %></h3>
+  <% if user.id == @current_user.id %>
+    <h3><%= user.name %> (Current User)</h3>
+  <% else %>
+    <h3><%= user.name %></h3>
+  <% end %>
+
 
   <p>
     <strong>Username: </strong>
@@ -35,7 +40,7 @@
   <p>
     <strong>Image:</strong>
     <br/>
-    <%= link_to image_tag(user.image_as_thumbnail, :class => "link-exclude"), user.image if user.image.attached? %>
+    <%= link_to image_tag(user.image_as_thumbnail), user.image, :class => "link-exclude" if user.image.attached? %>
   </p>
 
 </div>
