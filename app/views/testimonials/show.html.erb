@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 
 <%= render @testimonial %>
 
 <div>
-  <%= link_to "Edit this testimonial", edit_testimonial_path(@testimonial) %> |
+  <%= link_to "Edit this testimonial", edit_testimonial_path(@testimonial) %>
   <%= link_to "Back to testimonials", testimonials_path %>
+
+  <hr style="margin: 50px;" />
 
   <%= button_to "Destroy this testimonial", @testimonial, method: :delete %>
 </div>

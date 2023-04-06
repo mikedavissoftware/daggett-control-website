@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 
-<h1>Testimonials</h1>
+<hr width="15%" />
+
+<%= link_to "Create a new testimonial", new_testimonial_path %>
+
+<h2>...or Browse Your Testimonials Below</h2>
+
+<hr width="40%" />
 
 <div id="testimonials">
   <% @testimonials.each do |testimonial| %>
     <%= render testimonial %>
-    <p>
-      <%= link_to "Show this testimonial", testimonial %>
-    </p>
+    <%= link_to "Show this testimonial", testimonial %>
+    <hr width="75%" />
   <% end %>
 </div>
-
-<%= link_to "New testimonial", new_testimonial_path %>

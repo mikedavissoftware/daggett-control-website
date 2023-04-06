@@ -12,24 +12,26 @@
   <% end %>
 
   <div>
-    <%= form.label :company, style: "display: block" %>
+    <%= form.label "#{:company}:" %>
     <%= form.text_field :company %>
   </div>
 
   <div>
-    <%= form.label :logo, style: "display: block" %>
+    <%= form.label "#{:logo}:" %>
     <%= form.text_field :logo %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label "#{:description}:" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :website, style: "display: block" %>
+    <%= form.label "#{:website}:" %>
     <%= form.text_field :website %>
   </div>
+
+  <hr width="15%">
 
   <div>
     <%= form.submit %>

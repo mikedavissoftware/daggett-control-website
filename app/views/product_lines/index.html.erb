@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 
-<h1>Product lines</h1>
+<hr width="15%" />
+
+<%= link_to "Create a new product line", new_product_line_path %>
+
+<h2>...or Browse Your Product Lines Below</h2>
+
+<hr width="40%" />
 
 <div id="product_lines">
   <% @product_lines.each do |product_line| %>
     <%= render product_line %>
-    <p>
-      <%= link_to "Show this product line", product_line %>
-    </p>
+    <%= link_to "Show this product line", product_line %>
+    <hr width="75%" />
   <% end %>
 </div>
-
-<%= link_to "New product line", new_product_line_path %>

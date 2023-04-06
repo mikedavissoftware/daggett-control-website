@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 
 <%= render @product_line %>
 
 <div>
   <%= link_to "Edit this product line", edit_product_line_path(@product_line) %> |
   <%= link_to "Back to product lines", product_lines_path %>
+
+  <hr style="margin: 50px;" />
 
   <%= button_to "Destroy this product line", @product_line, method: :delete %>
 </div>
