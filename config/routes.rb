@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :product_lines
   resources :testimonials
   # root 'application#hello_world'
-  root 'application#database_home'
+  root 'users#index'
 
   resources :users
   resources :contact_form, only: [:create]
