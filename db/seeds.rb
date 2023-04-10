@@ -29,7 +29,8 @@ User.create(
 
 # Create Product Lines
 puts "Creating Product Lines..."
-10.times do
+product_amount = 10
+product_amount.times do
   ProductLine.create(
     company: Faker::Company.name,
     logo: Faker::Company.logo,
@@ -39,13 +40,14 @@ puts "Creating Product Lines..."
 end
 
 puts "Creating Testimonials..."
-30.times do
+testimonial_amount = product_amount * 3
+testimonial_amount.times do
   Testimonial.create(
     name: Faker::Name.name,
     content: Faker::Lorem.paragraph(sentence_count: 3),
     website: "http://website.com",
     # image: Faker::Avatar.image,
-    product_line_id: rand(1..10)
+    product_line_id: rand(1..product_amount)
   )
 end
 

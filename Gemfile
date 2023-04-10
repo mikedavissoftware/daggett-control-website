@@ -54,8 +54,6 @@ gem 'activestorage-validator'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  
-  gem "faker", "~> 2.18"
 end
 
 group :development do
@@ -84,3 +82,5 @@ gem 'active_model_serializers', '~> 0.10.12'
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'mail_form'
+
+gem "faker", "~> 2.18"
