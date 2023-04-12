@@ -3,7 +3,7 @@ import { GlobalContext } from "../App"
 
 
 export default function AccountPage() {
-  const { user, setUser, api } = useContext(GlobalContext)
+  const { user, setUser } = useContext(GlobalContext)
 
   return (
     <div>
@@ -14,13 +14,13 @@ export default function AccountPage() {
       <p>{user.bio}</p>
 
       <hr/>
-      <a href={`${api}/users`} target="_blank" >Edit Users</a>
+      <a href={`/users`} target="_blank" >Edit Users</a>
       <br/>
 
-      <a href={`${api}/testimonials`} target="_blank" >Edit Testimonials</a>
+      <a href={`/testimonials`} target="_blank" >Edit Testimonials</a>
       <br/>
 
-      <a href={`${api}/product_lines`} target="_blank" >Edit Product Lines</a>
+      <a href={`/product_lines`} target="_blank" >Edit Product Lines</a>
     </div>
   )
 }

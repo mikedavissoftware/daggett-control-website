@@ -6,7 +6,7 @@ import Logo from "../assets/daggett-control-logo-1.png"
 
 
 export default function Footer() {
-  const { user, setUser, api } = useContext(GlobalContext)
+  const { user, setUser } = useContext(GlobalContext)
 
   const history = useHistory()
   const loginRedirect = () => {
@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   function handleLogout() {
-    fetch(`${api}/logout`, { method: "DELETE" })
+    fetch(`/logout`, { method: "DELETE" })
     .then((r) => {
       if (r.ok) {
         setUser(null);

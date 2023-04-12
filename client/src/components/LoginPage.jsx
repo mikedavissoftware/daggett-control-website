@@ -4,7 +4,7 @@ import { GlobalContext } from "../App"
 
 
 export default function LoginPage() {
-  const { user, setUser, api } = useContext(GlobalContext)
+  const { user, setUser } = useContext(GlobalContext)
 
   const [formData, setFormData] = useState({
     username: "",
@@ -26,7 +26,7 @@ export default function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch(`${api}/login`, {
+    fetch(`/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
