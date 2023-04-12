@@ -19,6 +19,13 @@ module DaggettControlWebsite
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :delete, :patch, :put, :options]
+      end
+    end
+
     # ▾ Must add these lines! ▾
     # Adding back cookies and session middleware
     config.middleware.use ActionDispatch::Cookies
@@ -26,13 +33,6 @@ module DaggettControlWebsite
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
-
-    # config.middleware.use Rack::Cors do
-    #   allow do
-    #     origins '*'
-    #     resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
-    #   end
-    # end
 
     # config.before_configuration do
     #   env_file = File.join(Rails.root, 'config.ru', 'local_env.yml')

@@ -1,12 +1,12 @@
 import { useContext } from "react"
 import { NavLink, useHistory } from "react-router-dom"
 
-import { UserContext } from "../App"
+import { GlobalContext } from "../App"
 import Logo from "../assets/daggett-control-logo-1.png"
 
 
 export default function Footer() {
-  const {user, setUser} = useContext(UserContext)
+  const { user, setUser, api } = useContext(GlobalContext)
 
   const history = useHistory()
   const loginRedirect = () => {
@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   function handleLogout() {
-    fetch("/api/logout", { method: "DELETE" })
+    fetch(`${api}/logout`, { method: "DELETE" })
     .then((r) => {
       if (r.ok) {
         setUser(null);

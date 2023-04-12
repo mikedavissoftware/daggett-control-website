@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 
 import TestimonialCard from "./TestimonialCard"
+import { GlobalContext } from "../App"
 
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([])
+  const { user, setUser, api } = useContext(GlobalContext)
 
   useEffect(() => {
-    fetch("/api/testimonials")
+    fetch(`${api}/testimonials`)
     .then(r => r.json())
     .then(testimonialsData => {
       setTestimonials(testimonialsData)

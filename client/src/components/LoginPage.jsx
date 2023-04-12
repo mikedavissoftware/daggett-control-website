@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
+import { GlobalContext } from "../App"
 
-export default function LoginPage({ user, setUser }) {
-  console.log(user)
+
+export default function LoginPage() {
+  const { user, setUser, api } = useContext(GlobalContext)
 
   const [formData, setFormData] = useState({
     username: "",
@@ -24,7 +26,7 @@ export default function LoginPage({ user, setUser }) {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch("/api/login", {
+    fetch(`${api}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,8 +36,10 @@ export default function LoginPage({ user, setUser }) {
       if (r.ok) {
         r.json().then((currentUser) => setUser(currentUser));
         redirect()
+        console.log("login successful")
       } else {
         r.json().then((err) => setErrors(err.errors));
+        console.log("login unsuccessful")
       }
     });
   }
