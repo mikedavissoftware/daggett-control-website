@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_04_060533) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_060542) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -62,7 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_060533) do
     t.string "name"
     t.text "content"
     t.string "website"
-    t.integer "product_line_id", null: false
+    t.bigint "product_line_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_line_id"], name: "index_testimonials_on_product_line_id"

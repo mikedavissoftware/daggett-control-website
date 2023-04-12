@@ -12,6 +12,8 @@ gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+gem "pg", "~> 1.1"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -52,8 +54,6 @@ gem 'activestorage-validator'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  
-  gem "faker", "~> 2.18"
 end
 
 group :development do
@@ -82,3 +82,5 @@ gem 'active_model_serializers', '~> 0.10.12'
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'mail_form'
+
+gem "faker", "~> 2.18"

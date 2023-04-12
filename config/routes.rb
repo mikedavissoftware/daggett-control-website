@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :product_lines
   resources :testimonials
-  # root 'application#hello_world'
-  root 'application#database_home'
-
   resources :users
   resources :contact_form, only: [:create]
+
+  # root 'application#hello_world'
+  root 'users#index'
 
   get '/hello', to: 'application#hello_world'
 
