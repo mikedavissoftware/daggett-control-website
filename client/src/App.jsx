@@ -10,15 +10,17 @@ import AccountPage from "./components/AccountPage"
 import LoginPage from "./components/LoginPage"
 import Footer from "./components/Footer"
 
-export const UserContext = createContext()
+export const GlobalContext = createContext()
 
 
 export default function App() {
   const [user, setUser] = useState(null)
-  console.log(user)
+
+  // const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "http://localhost:3000"
+  const api = "https://daggett-control-website.onrender.com"
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <GlobalContext.Provider value={{ user, setUser, api }}>
       <Header />
       
       {(user) ? (
@@ -43,13 +45,13 @@ export default function App() {
         <>
         <Switch>
           <Route path="/">
-            <LoginPage user={user} setUser={setUser} />
+            <LoginPage />
           </Route>
         </Switch>
         </>
       )}
 
       <Footer />
-    </UserContext.Provider>
+    </GlobalContext.Provider>
   )
 }
