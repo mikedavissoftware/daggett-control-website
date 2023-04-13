@@ -1,8 +1,8 @@
 require "active_support/core_ext/integer/time"
 
-Rails.application.routes.default_url_options = {
-  host: 'http://localhost:3000'
-}
+# Rails.application.routes.default_url_options = {
+#   host: 'http://localhost:3000'
+# }
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -97,7 +97,7 @@ Rails.application.configure do
 
 
   config.action_mailer_default_url_options = { host: 'https://daggett-control.onrender.com' }
-  Rails.application.routes.default_url_options[:host] = 'https://daggett-control.onrender.com'
+  # Rails.application.routes.default_url_options[:host] = 'https://daggett-control.onrender.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
