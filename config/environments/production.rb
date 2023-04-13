@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.routes.default_url_options = {
-  host: 'https://daggett-control.onrender.com'
+  host: 'http://localhost:3000'
 }
 
 Rails.application.configure do
@@ -97,7 +97,6 @@ Rails.application.configure do
 
 
   config.action_mailer_default_url_options = { host: 'https://daggett-control.onrender.com' }
-  # Rails.application.routes.default_url_options[:host] = 'https://daggett-control.onrender.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
