@@ -34,13 +34,6 @@ module DaggettControlWebsite
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # config.action_dispatch.cookies_same_site_protection = :strict
 
-    config.middleware.use Rack::Cors do
-      allow do
-        origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
-      end
-    end
-
     # config.before_configuration do
     #   env_file = File.join(Rails.root, 'config.ru', 'local_env.yml')
     #   YAML.load(File.open(env_file)).each do |key, value|
