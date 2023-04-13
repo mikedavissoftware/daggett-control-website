@@ -16,11 +16,11 @@ export const GlobalContext = createContext()
 export default function App() {
   const [user, setUser] = useState(null)
 
-  // const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "http://localhost:3000"
+  const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "http://localhost:3000"
   // const api = "https://daggett-control-website.onrender.com"
 
   return (
-    <GlobalContext.Provider value={{ user, setUser }}>
+    <GlobalContext.Provider value={{ user, setUser, api }}>
       <Header />
       
       {(user) ? (

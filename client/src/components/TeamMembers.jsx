@@ -7,7 +7,7 @@ export default function TeamMembers() {
   const [teamMembers, setTeamMembers] = useState([])
 
   useEffect(() => {
-    fetch(`/api/users.json`)
+    fetch(`${api}/users.json`)
     .then(r => r.json())
     .then(teamMembersData => {
       setTeamMembers(teamMembersData)
