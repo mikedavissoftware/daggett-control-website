@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   function handleLogout() {
-    fetch(`/logout`, { method: "DELETE" })
+    fetch(`/api/logout`, { method: "DELETE" })
     .then((r) => {
       if (r.ok) {
         setUser(null);

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   before_action :authorize
-  # skip_forgery_protection
+  skip_forgery_protection
 
   def hello_world
     session[:count] = (session[:count] || 0) + 1

@@ -14,13 +14,13 @@ export default function AccountPage() {
       <p>{user.bio}</p>
 
       <hr/>
-      <a href={`/users`} target="_blank" >Edit Users</a>
+      <a href={`http://localhost:3000/users`} target="_blank" >Edit Users</a>
       <br/>
 
-      <a href={`/testimonials`} target="_blank" >Edit Testimonials</a>
+      <a href={`http://localhost:3000/testimonials`} target="_blank" >Edit Testimonials</a>
       <br/>
 
-      <a href={`/product_lines`} target="_blank" >Edit Product Lines</a>
+      <a href={`http://localhost:3000/product_lines`} target="_blank" >Edit Product Lines</a>
     </div>
   )
 }
