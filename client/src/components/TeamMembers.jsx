@@ -1,10 +1,12 @@
 import { useState, useEffect, useContext } from "react"
 
 import TeamMemberCard from "./TeamMemberCard"
+import { GlobalContext } from "../App"
 
 
 export default function TeamMembers() {
   const [teamMembers, setTeamMembers] = useState([])
+  const { user, setUser, api } = useContext(GlobalContext)
 
   useEffect(() => {
     fetch(`${api}/users.json`)
