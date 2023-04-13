@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.routes.default_url_options = {
-  host: 'https://daggett-control.onrender.com/api/'
+  host: 'https://daggett-control.onrender.com'
 }
 
 Rails.application.configure do
