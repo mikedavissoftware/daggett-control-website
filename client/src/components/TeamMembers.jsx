@@ -5,9 +5,9 @@ import { GlobalContext } from "../App"
 
 
 export default function TeamMembers() {
-  const [teamMembers, setTeamMembers] = useState([])
   const { user, setUser, api } = useContext(GlobalContext)
 
+  const [teamMembers, setTeamMembers] = useState([])
   useEffect(() => {
     fetch(`${api}/users.json`)
     .then(r => r.json())
