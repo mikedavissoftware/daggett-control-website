@@ -14,42 +14,32 @@ export const GlobalContext = createContext()
 
 
 export default function App() {
-  const [user, setUser] = useState(null)
+  // const [user, setUser] = useState(null)
 
   const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "http://localhost:3000"
   // const api = "https://daggett-control-website.onrender.com"
 
   return (
-    <GlobalContext.Provider value={{ user, setUser, api }}>
+    <GlobalContext.Provider value={{ api }}>
       <Header />
       
-      {(user) ? (
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/about">
-            <AboutUsPage />
-          </Route>
-          <Route path="/products">
-            <ProductsPage />
-          </Route>
-          <Route path="/contact">
-            <ContactPage />
-          </Route>
-          <Route path="/account">
-            <AccountPage />
-          </Route>
-        </Switch>
-      ) : (
-        <>
-        <Switch>
-          <Route path="/">
-            <LoginPage />
-          </Route>
-        </Switch>
-        </>
-      )}
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/about">
+          <AboutUsPage />
+        </Route>
+        <Route path="/products">
+          <ProductsPage />
+        </Route>
+        <Route path="/contact">
+          <ContactPage />
+        </Route>
+        <Route path="/account">
+          <AccountPage />
+        </Route>
+      </Switch>
 
       <Footer />
     </GlobalContext.Provider>

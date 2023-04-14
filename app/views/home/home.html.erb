@@ -5,6 +5,8 @@
     <%= link_to "See All Product Lines", product_lines_path, :style => "display: inline-block;" %>
     <% if @current_user %>
       <%= link_to "My Account", @current_user, :style => "display: inline-block;" %>
+    <% else %>
+      <%= link_to "Log In", "/login" %>
     <% end %>
   </nav>
 </div>

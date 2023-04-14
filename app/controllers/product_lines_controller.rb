@@ -1,5 +1,6 @@
 class ProductLinesController < ApplicationController
   before_action :set_product_line, only: %i[ show edit update destroy ]
+  skip_before_action :authorize, only: %i[ index show]
 
   # GET /product_lines or /product_lines.json
   def index

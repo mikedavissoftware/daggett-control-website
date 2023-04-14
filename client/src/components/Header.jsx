@@ -1,27 +1,11 @@
-import { useContext } from "react"
-import { NavLink, useHistory } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-import { GlobalContext } from "../App"
 import Logo from "../assets/daggett-control-logo-1.png"
 
 
 export default function Header() {
-  const { user, setUser, api } = useContext(GlobalContext)
 
-  const history = useHistory()
-  const loginRedirect = () => {
-    history.push('/login')
-  }
 
-  function handleLogout() {
-    fetch(`${api}/logout`, { method: "DELETE" })
-    .then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
-    loginRedirect()
-  }
 
   return (
     <div>
@@ -34,14 +18,6 @@ export default function Header() {
         <NavLink to="/about">About Us</NavLink>
         <NavLink to="/products">Products</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
-        {(user) ? (
-          <>
-          <NavLink to="/account">Account</NavLink>
-          <button onClick={handleLogout}>Log Out</button>
-          </>
-        ) : (
-          <button onClick={loginRedirect}>Log In</button>
-        )}
       </nav>
     </div>
   )
