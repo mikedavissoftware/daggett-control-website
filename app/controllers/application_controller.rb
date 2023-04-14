@@ -29,7 +29,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    @current_user = User.find_by(id:session[:user_id])
-    redirect_to login_path, alert: "Not authorized. Log in to edit the database."
+    @current_user = User.find(session[:user_id])
   end
 end
