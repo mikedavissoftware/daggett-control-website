@@ -1,25 +1,20 @@
-<% if notice %>
-  <p style="color: green"><%= notice %></p>
-<% end %>
-
 <%= render @user %>
 
 <div class="user">
-  <% if @user.id == @current_user.id %>
+  <% if @user.id == session[:user_id] %>
     <%= link_to "Edit this user", edit_user_path(@user)%>
   <% end %>
   <%= link_to "Back to users", users_path, :class => "button" %>
 
   <hr style="margin: 50px;" />
 
-  <% if @user.id == @current_user.id %>
-    <%= button_to "Destroy this user", @user, method: :delete %>
+  <% if @user.id == session[:user_id] %>
+    <%= button_to "Log Out", "/logout", method: :delete %>
+    <hr/>
+    <%= button_to "Destroy this user", @user, method: :delete, data: {"turbo-confirm": "Are you sure?"} %>
+  <% else %>
+    <h4>You can't edit or destroy this user unless you're logged in as them.</h4>
+    <h4>If you just created this user and wish to edit:</h4>
+    <%= button_to "Log Out", "/logout", method: :delete, :style => "display: inline-block;" %>
   <% end %>
-
-  <% if @user.id != @current_user.id %>
-    <h4>You can't destroy this user unless you're logged in as them.</h4>
-    <h4>If you just created this user and wish to log in as them, <a href="https://localhost:3000/logout" style="display: inline;">log out</a> of the current user to do so.</h4>
-  <% end %>
-
-  <% puts @session %>
 </div>

@@ -1,5 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: %i[ show edit update destroy ]
+  skip_before_action :authorize, only: %i[ index show ]
 
   # GET /testimonials or /testimonials.json
   def index

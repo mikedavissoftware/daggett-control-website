@@ -1,4 +1,5 @@
 class ContactFormsController < ApplicationController
+  
   # POST /contact_forms or /contact_forms.json
   def create
     @contact_form = ContactForm.new(contact_form_params)

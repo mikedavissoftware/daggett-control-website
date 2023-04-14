@@ -1,26 +1,21 @@
 class ProductLinesController < ApplicationController
   before_action :set_product_line, only: %i[ show edit update destroy ]
-  skip_before_action :authorize, only: %i[ index show]
+  skip_before_action :authorize, only: %i[ index show ]
 
-  # GET /product_lines or /product_lines.json
   def index
     @product_lines = ProductLine.all
   end
 
-  # GET /product_lines/1 or /product_lines/1.json
   def show
   end
 
-  # GET /product_lines/new
   def new
     @product_line = ProductLine.new
   end
 
-  # GET /product_lines/1/edit
   def edit
   end
 
-  # POST /product_lines or /product_lines.json
   def create
     @product_line = ProductLine.new(product_line_params)
 
@@ -35,7 +30,6 @@ class ProductLinesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /product_lines/1 or /product_lines/1.json
   def update
     respond_to do |format|
       if @product_line.update(product_line_params)
@@ -48,7 +42,6 @@ class ProductLinesController < ApplicationController
     end
   end
 
-  # DELETE /product_lines/1 or /product_lines/1.json
   def destroy
     @product_line.destroy
 
