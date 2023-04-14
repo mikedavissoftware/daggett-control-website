@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :contact_form, only: [:create]
 
   # root 'application#hello_world'
-  root 'application#database_home'
+  root 'users#index'
 
   get '/hello', to: 'application#hello_world'
 

@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   before_action :authorize
-  skip_before_action :authorize, only: %i[ hello_world database_home ]
   skip_forgery_protection
 
   def hello_world
