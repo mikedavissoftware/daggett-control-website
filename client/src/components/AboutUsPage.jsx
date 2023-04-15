@@ -9,6 +9,7 @@ import { GlobalContext } from "../App"
 export default function AboutUsPage() {
 
   const { user, setUser, api } = useContext(GlobalContext)
+  console.log(api)
 
   const [teamMembers, setTeamMembers] = useState([])
   useEffect(() => {
