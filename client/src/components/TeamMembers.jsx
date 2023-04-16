@@ -15,7 +15,7 @@ export default function TeamMembers() {
       setTeamMembers(teamMembersData)
     })
   }, [])
-  // console.log(teamMembers)
+  console.log(teamMembers)
 
   const teamMemberComponents = teamMembers.map((teamMember) => {
     return <TeamMemberCard key={teamMember.id} teamMember={teamMember} />

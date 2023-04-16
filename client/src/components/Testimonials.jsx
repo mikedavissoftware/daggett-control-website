@@ -15,6 +15,7 @@ export default function Testimonials() {
       setTestimonials(testimonialsData)
     })
   }, [])
+  console.log(testimonials)
 
   const testimonialComponents = testimonials.map((testimonial) => {
     return <TestimonialCard key={testimonial.id} testimonial={testimonial} />
