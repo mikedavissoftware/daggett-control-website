@@ -3,11 +3,12 @@ class ContactFormsController < ApplicationController
   # POST /contact_forms or /contact_forms.json
   def create
     @contact_form = ContactForm.new(contact_form_params)
+    @contact_form.deliver!
 
-    if @contact.deliver
+    if @contact_form.deliver
       render json: {message: "Email sent successfully"}
     else
-      render json: @contact.errors
+      render json: @contact_form.errors
     end
   end
 
