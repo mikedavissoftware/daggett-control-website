@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :product_lines
   resources :testimonials
   resources :users
-  resources :contact_form, only: [:create]
+  resources :contact_forms
 
   # root 'application#hello_world'
   root 'application#database_home'
@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  post '/contact', to: 'contact_forms#send_form'
 
 end
