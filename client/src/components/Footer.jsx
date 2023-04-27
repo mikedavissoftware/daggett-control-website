@@ -6,7 +6,6 @@ import Logo from "../assets/daggett-control-logo-1.png"
 export default function Footer() {
 
   
-
   return (
     <div>
       <nav>

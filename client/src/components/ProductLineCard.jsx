@@ -4,8 +4,6 @@
 
 export default function ProductLineCard({productLine}) {
 
-  console.log(productLine)
-
 
   return (
     <div className="my-4">

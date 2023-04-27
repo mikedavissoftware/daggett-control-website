@@ -1,15 +1,9 @@
-import { useState, useEffect, useContext } from "react"
-
 import TeamMembers from "./TeamMembers"
 import Testimonials from "./Testimonials"
-
-import { GlobalContext } from "../App"
 
 
 export default function AboutUsPage() {
 
-  const { user, setUser, api } = useContext(GlobalContext)
-  console.log(api)
 
   return (
     <div>

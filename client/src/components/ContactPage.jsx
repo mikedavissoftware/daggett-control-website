@@ -1,12 +1,8 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
-
-import { GlobalContext } from "../App"
 
 
 export default function ContactPage() {
-
-  const { api } = useContext(GlobalContext)
 
   const history = useHistory()
   const redirect = () => {
@@ -30,7 +26,7 @@ export default function ContactPage() {
     e.preventDefault()
     console.log(formData)
     // console.log(JSON.stringify(formData))
-    fetch(`${api}/contact`, {
+    fetch(`/api/contact`, {
       mode: "no-cors",
       method: "POST",
       headers: {
