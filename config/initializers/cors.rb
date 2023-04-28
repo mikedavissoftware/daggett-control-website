@@ -8,14 +8,14 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
   allow do
-    origins 'http://localhost:5172'
+    origins 'http://localhost:5173'
     resource '/contact_forms', 
       headers: :any, 
       methods: [:post]
   end
 
   allow do
-    origins 'http://localhost:4172'
+    origins 'http://localhost:4173'
     resource '/contact_forms', 
       headers: :any, 
       methods: [:post]

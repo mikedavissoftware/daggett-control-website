@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useHistory } from "react-router-dom"
 
 
@@ -26,8 +26,7 @@ export default function ContactPage() {
     e.preventDefault()
     console.log(formData)
     // console.log(JSON.stringify(formData))
-    fetch(`/api/contact`, {
-      mode: "no-cors",
+    fetch(`/api/contact_forms`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
