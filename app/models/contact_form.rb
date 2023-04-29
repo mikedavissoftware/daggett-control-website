@@ -2,6 +2,8 @@ class ContactForm < MailForm::Base
   attribute :name
   attribute :email
   attribute :content
+
+  validates_presence_of [:name, :email, :content]
   
   def headers
     { 

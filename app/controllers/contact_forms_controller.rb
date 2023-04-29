@@ -4,14 +4,12 @@ class ContactFormsController < ApplicationController
   def create
     @contact_form = ContactForm.new(contact_form_params)
 
-    if @contact_form.save
-      ContactFormMailer.with(contact_form: @contact_form).new_contact_form_email.deliver_later
+    ContactFormMailer.with(contact_form: @contact_form).new_contact_form_email.deliver!
 
-      flash[:success] = "Thank you for your email. We will be in touch!"
-      redirect_to root_path
+    if @contact_form.deliver
+      render json: {success: ["Email successfully sent! We will be in touch."]}, status: :ok
     else
-      flash.now[:error] = "Something went wrong. Please try again or email us directly at ron@daggettcontrol.com."
-      render :new
+      render json: {errors: ["Something went wrong. Please try again or email us directly at ron@daggettcontrol.com."]}, status: :unprocessable_entity
     end
   end
 

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 
 
@@ -6,9 +6,10 @@ export default function ContactPage() {
 
   const history = useHistory()
   const redirect = () => {
-    history.push("/login")
+    history.push("/")
   }
 
+  const [success, setSuccess] = useState([])
   const [errors, setErrors] = useState([])
 
   const [formData, setFormData] = useState({
@@ -33,12 +34,17 @@ export default function ContactPage() {
       },
       body: JSON.stringify(formData),
     }).then((r) => {
+      // console.log(r)
+
       if (r.ok) {
-        r.json().then((currentUser) => setUser(currentUser));
-        redirect()
+        r.json().then((res) => {
+          console.log(res)
+          setSuccess(res.success)
+        });
         console.log("contact successful")
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((res) => setErrors(res.errors));
+        console.log(errors)
         console.log("contact unsuccessful")
       }
     });
@@ -48,6 +54,8 @@ export default function ContactPage() {
   return (
     <div>
       <h2 className="text-3xl">Contact Us</h2>
+      <h4 className="success">{success}</h4>
+      <h4 className="error">{errors}</h4>
       <div>
         <form onSubmit={handleSubmit}>
 
