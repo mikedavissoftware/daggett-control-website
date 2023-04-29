@@ -39,11 +39,15 @@ export default function ContactPage() {
       if (r.ok) {
         r.json().then((res) => {
           console.log(res)
+          setErrors([])
           setSuccess(res.success)
         });
         console.log("contact successful")
       } else {
-        r.json().then((res) => setErrors(res.errors));
+        r.json().then((res) => {
+          setSuccess([])
+          setErrors(res.errors)
+        });
         console.log(errors)
         console.log("contact unsuccessful")
       }
