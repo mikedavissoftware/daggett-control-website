@@ -24,7 +24,7 @@ export default function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch(`https://daggett-control-website.onrender.com/login`, {
+    fetch(`/api/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

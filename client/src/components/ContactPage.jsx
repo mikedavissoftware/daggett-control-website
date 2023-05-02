@@ -28,7 +28,7 @@ export default function ContactPage() {
     e.preventDefault()
     console.log(formData)
     // console.log(JSON.stringify(formData))
-    fetch(`https://daggett-control-website.onrender.com/contact_forms`, {
+    fetch(`/api/contact_forms`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

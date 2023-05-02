@@ -8,7 +8,7 @@ export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
-    fetch(`https://daggett-control-website.onrender.com/testimonials.json`)
+    fetch(`/api/testimonials.json`)
     .then(r => r.json())
     .then(testimonialsData => {
       setTestimonials(testimonialsData)
