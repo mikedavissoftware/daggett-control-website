@@ -15,8 +15,12 @@ export const GlobalContext = createContext()
 
 export default function App() {
 
+  const api = (import.meta.env.PROD) ? ("https://daggett-control-website.onrender.com") : ("/api")
+
+  console.log(api)
+
   return (
-    <div>
+    <GlobalContext.Provider value={{ api }} >
       <Header />
       
       <Switch>
@@ -38,6 +42,6 @@ export default function App() {
       </Switch>
 
       <Footer />
-    </div>
+    </GlobalContext.Provider>
   )
 }

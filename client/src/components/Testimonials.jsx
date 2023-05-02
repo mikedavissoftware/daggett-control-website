@@ -5,10 +5,13 @@ import { GlobalContext } from "../App"
 
 
 export default function Testimonials() {
+
+  const { api } = useContext(GlobalContext)
+
   const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
-    fetch(`/api/testimonials.json`)
+    fetch(`${api}/testimonials.json`)
     .then(r => r.json())
     .then(testimonialsData => {
       setTestimonials(testimonialsData)
