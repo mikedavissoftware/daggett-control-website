@@ -8,7 +8,7 @@ export default function ProductsPage() {
   const [productLines, setProductLines] = useState([])
 
   useEffect(() => {
-    fetch(`/api/product_lines.json`)
+    fetch(`https://daggett-control-website.onrender.com/product_lines.json`)
     .then(r => r.json())
     .then(productLinesData => {
       setProductLines(productLinesData)

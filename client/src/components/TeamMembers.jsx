@@ -7,7 +7,7 @@ export default function TeamMembers() {
 
   const [teamMembers, setTeamMembers] = useState([])
   useEffect(() => {
-    fetch(`/api/users.json`)
+    fetch(`https://daggett-control-website.onrender.com/users.json`)
     .then(r => r.json())
     .then(teamMembersData => {
       setTeamMembers(teamMembersData)

@@ -12,11 +12,12 @@ export default function ContactPage() {
   const [success, setSuccess] = useState([])
   const [errors, setErrors] = useState([])
 
-  const [formData, setFormData] = useState({
+  const newForm = {
     name: "",
     email: "",
     content: ""
-  })
+  }
+  const [formData, setFormData] = useState(newForm)
 
   function handleChange(e) {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -27,7 +28,7 @@ export default function ContactPage() {
     e.preventDefault()
     console.log(formData)
     // console.log(JSON.stringify(formData))
-    fetch(`/api/contact_forms`, {
+    fetch(`https://daggett-control-website.onrender.com/contact_forms`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,6 +43,7 @@ export default function ContactPage() {
           setErrors([])
           setSuccess(res.success)
         });
+        setFormData(newForm)
         console.log("contact successful")
       } else {
         r.json().then((res) => {
