@@ -16,9 +16,9 @@ export default function Footer() {
       </nav>
       <div className="grid lg:grid-cols-2">
         <div>
-          <img src={Logo} className="mx-auto w-1/2 lg:w-3/4 lg:ml-auto drop-shadow-sm-white"/>
+          <img src={Logo} className="mx-auto w-1/2 lg:w-fit lg:ml-auto drop-shadow-sm-white"/>
         </div>
-        <div className="lg:">
+        <div className="">
           <h1 className="text-3xl lg:text-left">Daggett Control Company, LLC</h1>
           <h3>Industrial Controls & Consulting</h3>
         </div>

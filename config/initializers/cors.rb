@@ -14,7 +14,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'http://localhost:5173'
     resource '*', 
       headers: :any, 
-      methods: :any
+      methods: [:get]
     resource '/contact_forms',
       headers: :any, 
       methods: [:post]
@@ -24,7 +24,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'http://localhost:4173'
     resource '*', 
       headers: :any, 
-      methods: :any
+      methods: [:get]
     resource '/contact_forms',
       headers: :any, 
       methods: [:post]

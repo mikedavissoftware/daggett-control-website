@@ -39,8 +39,6 @@ export default function ContactPage() {
       },
       body: JSON.stringify(formData),
     }).then((r) => {
-      // console.log(r)
-
       if (r.ok) {
         r.json().then((res) => {
           console.log(res)
@@ -48,12 +46,17 @@ export default function ContactPage() {
           setSuccess(res.success)
         });
         setFormData(newForm)
+        console.log(success)
         console.log("contact successful")
       } else {
-        r.json().then((res) => {
-          setSuccess([])
-          setErrors(res.errors)
-        });
+        (r.status === 500) ? (
+          setErrors(["Database unreachable. Please try again."])
+        ) : (
+          r.json().then((res) => {
+            setSuccess([])
+            setErrors(res.errors)
+          })
+        )
         console.log(errors)
         console.log("contact unsuccessful")
       }
@@ -65,7 +68,15 @@ export default function ContactPage() {
     <div>
       <h2 className="text-3xl">Contact Us</h2>
       <h4 className="success">{success}</h4>
-      <h4 className="error">{errors}</h4>
+      {(errors.length > 0) ? (
+        <>
+          {errors.map((error) => {
+            return <h4 className="error">{error}</h4>
+          })}
+          <h4>Or email us directly at <a href='mailto:rondaggett@daggettcontrol.com'>ron@daggettcontrol.com</a>.</h4>
+        </>
+      ) : (null)}
+      
       <div>
         <form onSubmit={handleSubmit}>
 
