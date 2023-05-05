@@ -66,6 +66,6 @@ class TestimonialsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def testimonial_params
-      params.require(:testimonial).permit(:name, :content, :website, :product_line_id)
+      params.require(:testimonial).permit(:name, :content, :website, :product_line_id, :picture)
     end
 end

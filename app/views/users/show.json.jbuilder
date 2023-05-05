@@ -9,7 +9,7 @@ json.user do
   json.bio @user.bio
   json.website @user.website
   if @user.image.attached?
-    json.image ("/api" + url_for(@user.image))
-    json.thumbnail ("/api" + url_for(@user.image_as_thumbnail))
+    json.image (url_for(@user.image))
+    json.thumbnail (url_for(@user.image_as_thumbnail))
   end
 end

@@ -19,4 +19,10 @@
     <%= product_line.website %>
   </p>
 
+  <p>
+    <strong>Image:</strong>
+    <br/>
+    <%= link_to image_tag(product_line.image_as_thumbnail), product_line.image, :class => "link-exclude" if product_line.image.attached? %>
+  </p>
+
 </div>

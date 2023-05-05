@@ -27,8 +27,13 @@
   </div>
 
   <div>
-    <%= form.label "#{:product_line_id}:" %>
-    <%= form.text_field :product_line_id %>
+    <%= form.label "Product line:" %>
+    <%= select("testimonial", "product_line_id", ProductLine.all.collect{|product_line| [ product_line.company, product_line.id ] }, { include_blank: true }) %>
+  </div>
+
+  <div>
+    <%= form.label "#{:picture}:" %>
+    <%= form.file_field :picture %>
   </div>
 
   <hr width="15%">
