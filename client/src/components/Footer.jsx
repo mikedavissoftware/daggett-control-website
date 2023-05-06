@@ -25,21 +25,35 @@ export default function Footer() {
     //   </div>
     // </div>
 
-    <footer className="footer footer-center p-5 bg-base-200 text-base-content rounded">
-      <nav className="grid grid-flow-col gap-4">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/contact">Contact Us</NavLink>
-      </nav>
+    <footer className="p-5 bg-base-300 text-base-content rounded-2xl">
+      <div className="collapse lg:hidden">
+        <input type="checkbox"/>
+        <div className="collapse-title bg-base-100 rounded-box px-1">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-full h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </div>
+        <div className="collapse-content">
+          <ul className="menu bg-base-100 rounded-b-xl">
+            <li><NavLink exact to="/" className="block">Home</NavLink></li>
+            <li><NavLink to="/about" className="block">About Us</NavLink></li>
+            <li><NavLink to="/products" className="block">Products</NavLink></li>
+            <li><NavLink to="/contact" className="block">Contact Us</NavLink></li>
+          </ul>
+        </div>
+      </div>
+      <div className="invisible h-0 lg:visible lg:h-auto">
+        <ul className="menu menu-horizontal bg-base-100 rounded-xl">
+          <li><NavLink exact to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About Us</NavLink></li>
+          <li><NavLink to="/products">Products</NavLink></li>
+          <li><NavLink to="/contact">Contact Us</NavLink></li>
+        </ul>
+      </div>
       <div>
-        <img src={Logo} className="w-3/4 drop-shadow-sm-white"/>
+        <img src={Logo} className="w-full md:max-w-3xl mx-auto drop-shadow-md-white my-3"/>
       </div> 
       <div>
         <p className="">Copyright © 2023 - All rights reserved by Daggett Control Company, LLC</p>
       </div>
     </footer>
-
-    
   )
 }

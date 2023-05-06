@@ -66,7 +66,7 @@ export default function ContactPage() {
 
   return (
     <div>
-      <h2 className="text-3xl">Contact Us</h2>
+      <h2 className="text-3xl font-semibold m-2">Contact Us</h2>
       <h4 className="success">{success}</h4>
       {(errors.length > 0) ? (
         <>
@@ -77,22 +77,28 @@ export default function ContactPage() {
         </>
       ) : (null)}
       
-      <div>
+      <div className="bg-primary p-5 my-5 rounded-2xl">
         <form onSubmit={handleSubmit}>
 
-          <div className="my-3">
-            <label>Name: </label>
-            <input id="name" name="name" type="text" value={formData.name} onChange={handleChange}></input>
+          <div className="form-control w-full max-w-xs mx-auto">
+            <label className="label">
+              <span className="label-text">What is your name?</span>
+            </label>
+            <input id="name" name="name" type="text" placeholder="Type email here..." value={formData.name} onChange={handleChange} className="input input-bordered w-full max-w-xs" />
           </div>
 
-          <div className="my-3">
-            <label>Email: </label>
-            <input id="email" name="email" type="text" placeholder="email@example.com" value={formData.email} onChange={handleChange}></input>
+          <div className="form-control w-full max-w-xs mx-auto">
+            <label className="label">
+              <span className="label-text">What is your email?</span>
+            </label>
+            <input id="email" name="email" type="text" placeholder="Type email here..." value={formData.email} onChange={handleChange} className="input input-bordered w-full max-w-xs" />
           </div>
 
-          <div className="my-3">
-            <label>Message: </label>
-            <input id="content" name="content" type="text" placeholder="Introduce yourself and tell us how we can help you!" value={formData.content} onChange={handleChange}  className=""></input>
+          <div className="form-control w-full max-w-xs mx-auto">
+            <label className="label">
+              <span className="label-text">What is your email?</span>
+            </label>
+            <textarea id="content" name="content" className="textarea textarea-bordered h-48" placeholder="Type message here..." value={formData.content} onChange={handleChange} ></textarea>
           </div>
 
           <div className="my-3">
