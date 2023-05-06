@@ -21,8 +21,8 @@ export default function ProductLineCard({productLine}) {
   }
 
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl m-10">
-      <figure className="m-10 hover:opacity-50"><a href={productLine.website} target="_blank"><img src={productLine.logo} alt="Album"/></a></figure>
+    <div className="card lg:card-side bg-slate-500 shadow-xl m-10 image-full">
+      <figure className="m-10 hover:opacity-50 mx-auto max-h-60"><a href={productLine.website} target="_blank"><img src={productLine.logo} alt="Album"/></a></figure>
       <div className="card-body">
         <h2 className="card-title justify-center">{productLine.company}</h2>
         <p>{productLine.description}</p>

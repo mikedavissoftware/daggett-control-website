@@ -10,7 +10,7 @@ export default function TeamMemberCard({ teamMember }) {
     <div className="card lg:card-side bg-base-100 shadow-xl m-5 p-3 lg:p-0 flex items-center">
       <figure className="w-full max-w-xs">
         <a href={image} target="_blank" className="">
-          <img src={image_as_thumbnail} alt={name} className="rounded-xl"/>
+          <img src={image_as_thumbnail} alt={name} className="rounded-xl lg:rounded-r-none"/>
         </a>
       </figure>
       <div className="card-body lg:text-left">

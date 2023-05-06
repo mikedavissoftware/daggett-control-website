@@ -17,16 +17,16 @@ export default function TestimonialCard({ testimonial }) {
     //   </div>
     // </div>
     <div className="card lg:card-side bg-base-100 shadow-xl m-5 p-3 lg:p-0 flex items-center">
-      <figure className="w-full max-w-xs">
-        <a href={image} target="_blank" className="">
-          <img src={product_line.logo} alt={name} className="rounded-xl w-48"/>
+      <figure className="w-full max-w-xs bg-slate-600">
+        <a href={image} target="_blank" className="flex">
+          <img src={product_line.logo} alt={name} className="rounded-xl w-48 block sm:mt-6 lg:m-auto"/>
         </a>
       </figure>
       <div className="card-body lg:text-left">
         <h2 className="font-bold text-xl">{name}</h2>
-        <h3 className="italic text-lg">secondary</h3>
-        <p>tertiary</p>
-        <a href={website} target="_blank">{website}</a>
+        <h3 className="italic text-lg">{product_line.company}</h3>
+        <p>{content}</p>
+        <a href={product_line.website} target="_blank">{product_line.website}</a>
       </div>
     </div>
   )

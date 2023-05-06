@@ -25,7 +25,7 @@ export default function ProductsPage() {
 
   return (
     <div>
-      <h2 className="text-3xl">This is the ProductsPage component</h2>
+      <h3 className="text-3xl my-2 mt-6"><strong>BROWSE OUR PRODUCT LINES</strong></h3>
       {productLineComponents}
     </div>
   )
