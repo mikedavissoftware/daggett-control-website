@@ -16,8 +16,6 @@ export default function App() {
 
   const api = (import.meta.env.PROD) ? ("https://daggett-control-website.onrender.com") : ("/api")
 
-  console.log(api)
-
   return (
     <GlobalContext.Provider value={{ api }} >
       <Header />
