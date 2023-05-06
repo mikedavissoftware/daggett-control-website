@@ -4,7 +4,7 @@
 
 export default function TeamMemberCard({ teamMember }) {
 
-  const {name, role, bio, website, image, image_as_thumbnail} = teamMember
+  const { name, role, bio, website, image, image_as_thumbnail } = teamMember
 
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl m-5 p-3 lg:p-0 flex items-center">
