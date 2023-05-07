@@ -24,9 +24,11 @@ export default function ProductsPage() {
   })
 
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <h3 className="text-3xl my-2 mt-6"><strong>BROWSE OUR PRODUCT LINES</strong></h3>
-      {productLineComponents}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        {productLineComponents}
+      </div>
     </div>
   )
 }

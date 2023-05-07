@@ -16,10 +16,10 @@ export default function TestimonialCard({ testimonial }) {
     //     <p>{content}</p>
     //   </div>
     // </div>
-    <div className="card lg:card-side bg-base-100 shadow-xl m-5 p-3 lg:p-0 flex items-center">
-      <figure className="w-full max-w-xs bg-slate-600">
+    <div className="card sm:card-side bg-base-100 shadow-xl m-5 items-center">
+      <figure className="w-full bg-slate-600 sm:max-w-xs">
         <a href={image} target="_blank" className="flex">
-          <img src={product_line.logo} alt={name} className="rounded-xl w-48 block sm:mt-6 lg:m-auto"/>
+          <img src={product_line.logo} alt={name} className="w-48 block my-5 sm:m-auto"/>
         </a>
       </figure>
       <div className="card-body lg:text-left">
