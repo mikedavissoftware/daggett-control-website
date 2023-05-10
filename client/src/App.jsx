@@ -14,7 +14,11 @@ export const GlobalContext = createContext()
 
 export default function App() {
 
-  const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "/api"
+  // const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "/api"
+  // const api = "/api"
+  const api = "http://localhost:3000"
+
+  console.log(api)
 
   return (
     <GlobalContext.Provider value={{ api }} >

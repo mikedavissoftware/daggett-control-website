@@ -33,9 +33,9 @@ export default function ContactPage() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch(`${api}/contact_forms`, {
+    fetch(`${api}/contact`, {
       method: "POST",
-      // mode: "no-cors",
+      // mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
