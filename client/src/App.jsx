@@ -23,8 +23,6 @@ export default function App() {
   return (
     <GlobalContext.Provider value={{ api }} >
       <Header />
-
-      <h1>Environment: {import.meta.env.PROD ? "Production" : "Development"}</h1>
       
       <Switch>
         <Route exact path="/">

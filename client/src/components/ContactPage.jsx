@@ -33,7 +33,7 @@ export default function ContactPage() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    fetch(`${api}/contact_forms`, {
+    fetch(`/api/contact_forms`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
