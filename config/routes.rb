@@ -18,6 +18,4 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  # post '/contact', to: 'contact_forms#send_form'
-
 end

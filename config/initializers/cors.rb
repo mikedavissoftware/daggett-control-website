@@ -1,7 +1,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
-    origins 'https://daggett-control-frontend-2.onrender.com'
+    origins 'https://daggett-control-frontend-2.onrender.com/'
     resource '*', 
       headers: :any, 
       methods: [:get]

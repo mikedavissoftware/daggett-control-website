@@ -8,18 +8,14 @@ export default defineConfig(() => {
   return {
     plugins: [react()],
     server: {
+      // https: true,
+      // cors: true,
       proxy: {
-        '/local-api': {
+        '/api': {
           target: "http://localhost:3000",
           changeOrigin: true,
           secure: false,
-          rewrite: path => path.replace(/^\/local-api/, '/'),
-        },
-        '/remote-api': {
-          target: "https://daggett-control-website.onrender.com",
-          changeOrigin: true,
-          secure: false,
-          rewrite: path => path.replace(/^\/remote-api/, '/'),
+          rewrite: path => path.replace(/^\/api/, '/'),
         }
       }
     },
