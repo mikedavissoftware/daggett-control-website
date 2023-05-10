@@ -14,11 +14,13 @@ export const GlobalContext = createContext()
 
 export default function App() {
 
-  const api = (import.meta.env.PROD) ? ("https://daggett-control-website.onrender.com") : ("/api")
+  const api = import.meta.env.PROD ? "/remote-api" : "/local-api"
 
   return (
     <GlobalContext.Provider value={{ api }} >
       <Header />
+
+      <h1>Environment: {import.meta.env.PROD ? "Production" : "Development"}</h1>
       
       <Switch>
         <Route exact path="/">

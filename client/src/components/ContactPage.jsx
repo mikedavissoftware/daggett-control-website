@@ -28,12 +28,14 @@ export default function ContactPage() {
     console.log(formData)
   }
 
+  // console.log(JSON.stringify({contact_form: formData}))
+
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
-    // console.log(JSON.stringify(formData))
     fetch(`${api}/contact_forms`, {
       method: "POST",
+      // mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
