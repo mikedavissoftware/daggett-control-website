@@ -7,6 +7,8 @@ export default function TeamMemberCard({ teamMember, api }) {
   const { name, role, bio, website, image, image_as_thumbnail } = teamMember
 
   console.log(api)
+
+  console.log(image)
   
 
   return (

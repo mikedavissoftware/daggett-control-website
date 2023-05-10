@@ -10,6 +10,6 @@ json.user do
   json.website @user.website
   if @user.image.attached?
     json.image (url_for(@user.image))
-    json.thumbnail (url_for(@user.image_as_thumbnail))
+    json.image_as_thumbnail (url_for(@user.image_as_thumbnail))
   end
 end

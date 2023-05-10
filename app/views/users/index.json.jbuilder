@@ -9,7 +9,7 @@ json.array! @users do |user|
   json.bio user.bio
   json.website user.website
   if user.image.attached?
-    json.image ("/api" + url_for(user.image))
-    json.image_as_thumbnail ("/api" + url_for(user.image_as_thumbnail))
+    json.image (url_for(user.image))
+    json.image_as_thumbnail (url_for(user.image_as_thumbnail))
   end
 end
