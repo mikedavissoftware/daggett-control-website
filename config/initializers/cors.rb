@@ -2,7 +2,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
     origins 'https://daggett-control-frontend-2.onrender.com'
-    resource '/contact',
+    resource '/contact_forms',
       headers: :any, 
       methods: [:post]
     resource '*', 
@@ -12,7 +12,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
     origins 'http://localhost:5173'
-    resource '/contact',
+    resource '/contact_forms',
       headers: :any, 
       methods: [:post]
     resource '*', 
@@ -22,7 +22,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
     origins 'http://localhost:4173'
-    resource '/contact',
+    resource '/contact_forms',
       headers: :any, 
       methods: [:post]
     resource '*', 
