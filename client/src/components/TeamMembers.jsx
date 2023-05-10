@@ -19,7 +19,7 @@ export default function TeamMembers() {
   console.log(teamMembers)
 
   const teamMemberComponents = teamMembers.map((teamMember) => {
-    return <TeamMemberCard key={teamMember.id} teamMember={teamMember} />
+    return <TeamMemberCard key={teamMember.id} teamMember={teamMember} api={api} />
   })
 
   console.log(teamMemberComponents)
