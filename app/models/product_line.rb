@@ -1,5 +1,5 @@
 class ProductLine < ApplicationRecord
-  has_many :testimonials
+  has_many :testimonials, dependent: :destroy
   has_one_attached :image
 
   # The following validations are enabled by the activestorage-validator gem

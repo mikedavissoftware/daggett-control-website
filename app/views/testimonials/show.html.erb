@@ -2,9 +2,10 @@
 
 <div>
   <%= link_to "Edit this testimonial", edit_testimonial_path(@testimonial) %>
+  <%= link_to "Show data object", "#{testimonial_path(@testimonial)}.json", target: "_blank" %>
   <%= link_to "Back to testimonials", testimonials_path %>
 
   <hr style="margin: 50px;" />
 
-  <%= button_to "Destroy this testimonial", @testimonial, method: :delete %>
+  <%= button_to "Destroy this testimonial", @testimonial, method: :delete, data: { "turbo-confirm": "Are you sure?" } %>
 </div>

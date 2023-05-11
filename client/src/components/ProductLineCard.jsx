@@ -1,17 +1,10 @@
+import LogoPlaceholder from "../assets/images/logo-placeholder.png"
 
 
 
+export default function ProductLineCard({ productLine }) {
 
-export default function ProductLineCard({productLine}) {
-
-
-  // return (
-  //   <div className="my-4">
-  //     <img src={productLine.logo} className="justify-center" />
-  //     <h3 className="text-xl font-bold">{productLine.company}</h3>
-  //     <p>{productLine.description}</p>
-  //   </div>
-  // )
+  const { company, logo, description, website, testimonials, image } = productLine
 
   function buttonNewTab(link) {
     window.open(
@@ -21,13 +14,19 @@ export default function ProductLineCard({productLine}) {
   }
 
   return (
-    <div className="card bg-slate-500 shadow-xl m-5 image-full max-h-60">
-      <figure className="p-5 mx-auto"><a href={productLine.website} target="_blank"><img src={productLine.logo} alt="Album" className="max-h-52"/></a></figure>
+    <div className="card bg-black shadow-xl m-5 image-full max-h-60 items-center">
+      <figure className="p-5 mx-auto">
+        {(image) ? (
+          <img src={image} alt="Album"/>
+        ) : (
+          <img src={LogoPlaceholder} alt="Album" className="blur-sm max-h-52"/>
+        )}
+      </figure>
       <div className="card-body">
-        <h2 className="card-title justify-center">{productLine.company}</h2>
-        <p>{productLine.description}</p>
+        <h2 className="card-title justify-center">{company}</h2>
+        <p>{description}</p>
         <div className="card-actions justify-center mt-3">
-          <button className="btn btn-primary hover:shadow-lg" onClick={() => {buttonNewTab(productLine.website)}}>Check Out Their Website</button>
+          <button className="btn btn-primary hover:shadow-lg" onClick={() => {buttonNewTab(website)}}>Check Out Their Website</button>
         </div>
       </div>
     </div>

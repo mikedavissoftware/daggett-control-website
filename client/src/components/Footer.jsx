@@ -9,7 +9,7 @@ export default function Footer() {
 
   
   return (
-    <footer className="p-5 bg-base-300 text-base-content">
+    <footer className="p-5 bg-slate-600 text-base-content">
       <div className="collapse md:hidden">
         <input type="checkbox"/>
         <div className="collapse-title bg-base-100 rounded-lg px-1">
@@ -21,7 +21,7 @@ export default function Footer() {
       <NavBarRegular />
 
       <div>
-        <img src={Logo} className="w-full md:max-w-3xl mx-auto drop-shadow-md-white my-3"/>
+        <img src={Logo} className="w-full md:max-w-3xl mx-auto drop-shadow-md my-3"/>
       </div> 
 
       <div className="grid justify-items-center">
