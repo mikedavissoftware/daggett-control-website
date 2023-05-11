@@ -7,7 +7,7 @@ export default function TestimonialCard({ testimonial }) {
 
   return (
     <div className="card sm:card-side bg-base-100 shadow-xl m-5 p-3 sm:p-0 flex items-center">
-      <figure className="w-full max-w-xs">
+      <figure className="w-full max-w-xxs">
         {(image) ? (
           <a href={image} target="_blank" className="flex">
             <img src={image_as_thumbnail} alt={name} className="rounded-xl sm:rounded-r-none"/>

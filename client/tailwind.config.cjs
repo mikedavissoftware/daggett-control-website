@@ -17,6 +17,10 @@ module.exports = {
         'xl-white': '0 0 8px rgb(255 255 255 / 1)',
         '2xl-white': '0 0 16px rgb(255 255 255 / 1)',
       },
+      maxWidth: ({ theme, breakpoints }) => ({
+        xxs: '16rem',
+        ...breakpoints(theme('screens')),
+      })
     }
   },
   daisyui: {

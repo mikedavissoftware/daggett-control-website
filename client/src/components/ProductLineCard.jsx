@@ -14,12 +14,12 @@ export default function ProductLineCard({ productLine }) {
   }
 
   return (
-    <div className="card bg-black shadow-xl m-5 image-full max-h-60 items-center">
+    <div className="card bg-black shadow-xl m-5 image-full items-center hover:border-2">
       <figure className="p-5 mx-auto">
         {(image) ? (
-          <img src={image} alt="Album"/>
+          <img src={image} alt="Album" className="blur-sm max-h-52"/>
         ) : (
-          <img src={LogoPlaceholder} alt="Album" className="blur-sm max-h-52"/>
+          <img src={LogoPlaceholder} alt="Album" className="blur-sm max-h-52 hover:blur-none"/>
         )}
       </figure>
       <div className="card-body">
