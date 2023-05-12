@@ -86,5 +86,3 @@ gem 'mail_form'
 gem "faker", "~> 2.18"
 
 gem 'email_validator'
-
-gem 'turbo-rails'
