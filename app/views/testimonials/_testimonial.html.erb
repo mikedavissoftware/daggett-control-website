@@ -22,7 +22,17 @@
   <p>
     <strong>Image:</strong>
     <br/>
-    <%= link_to image_tag(testimonial.image_as_thumbnail), testimonial.image, :class => "link-exclude" if testimonial.image.attached? %>
+    <%= link_to image_tag(testimonial.image), testimonial.image, :class => "link-exclude" if testimonial.image.attached? %>
+  </p>
+
+  <p>
+    <strong>X offset: </strong>
+    <%= testimonial.x_offset %>
+  </p>
+
+  <p>
+    <strong>Y offset: </strong>
+    <%= testimonial.y_offset %>
   </p>
 
 </div>

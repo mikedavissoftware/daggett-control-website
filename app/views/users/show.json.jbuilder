@@ -8,6 +8,8 @@ json.user do
   json.role @user.role
   json.bio @user.bio
   json.website @user.website
+  json.x_offset @user.x_offset
+  json.y_offset @user.y_offset
   if @user.image.attached?
     json.image (url_for(@user.image))
     json.image_as_thumbnail (url_for(@user.image_as_thumbnail))

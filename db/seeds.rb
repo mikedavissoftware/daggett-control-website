@@ -8,7 +8,9 @@ User.create(
   name: "Ron Daggett",
   role: "Owner and Operator",
   bio: "Ron Daggett has decades of experience in industrial controls, and has been an independent industrial control distributor. Ron values customers highly, going above and beyond in providing expertise & guidance to clients.",
-  website: ""
+  website: "",
+  x_offset: 0,
+  y_offset: 0
 )
 User.create(
   username: "stephanie",
@@ -16,7 +18,9 @@ User.create(
   name: "Stephanie Helfer",
   role: "Administrator",
   bio: "",
-  website: ""
+  website: "",
+  x_offset: 0,
+  y_offset: 0
 )
 User.create(
   username: "mike",
@@ -24,7 +28,9 @@ User.create(
   name: "Mike Davis",
   role: "Web Developer & Tech Consultant",
   bio: "Mike is a web developer, multimedia producer, and ethical entrepreneur. With many years of experience in technical project management & event production, he brings a tech savviness to Daggett Control that ensures smooth, efficient operation.",
-  website: "http://mikedavissoftware.com"
+  website: "http://mikedavissoftware.com",
+  x_offset: 0,
+  y_offset: 0
 )
 
 # Create Product Lines
@@ -46,7 +52,8 @@ testimonial_amount.times do
     name: Faker::Name.name,
     content: Faker::Lorem.paragraph(sentence_count: 3),
     website: "http://website.com",
-    # image: Faker::Avatar.image,
+    x_offset: 0,
+    y_offset: 0,
     product_line_id: rand(1..product_amount)
   )
 end

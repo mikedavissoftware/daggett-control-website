@@ -36,6 +36,16 @@
     <%= form.file_field :image %>
   </div>
 
+  <div>
+    <%= form.label "#{:x_offset}:" %>
+    <%= form.select :x_offset, (-300 ... 300).to_a.select{|x| x%5==0} %>
+  </div>
+
+  <div>
+    <%= form.label "#{:y_offset}:" %>
+    <%= form.select :y_offset, (-300 ... 300).to_a.select{|x| x%5==0} %>
+  </div>
+  
   <hr width="15%">
   
   <div>
