@@ -5,6 +5,11 @@
   <% else %>
     <h3><%= user.name %></h3>
   <% end %>
+  
+  <p>
+    <strong>ID:</strong>
+    <%= user.id %>
+  </p>
 
   <p>
     <strong>Username: </strong>
@@ -40,6 +45,16 @@
     <strong>Image:</strong>
     <br/>
     <%= link_to image_tag(user.image_as_thumbnail), user.image, :class => "link-exclude" if user.image.attached? %>
+  </p>
+
+  <p>
+    <strong>X offset: </strong>
+    <%= testimonial.x_offset %>
+  </p>
+
+  <p>
+    <strong>Y offset: </strong>
+    <%= testimonial.y_offset %>
   </p>
 
 </div>

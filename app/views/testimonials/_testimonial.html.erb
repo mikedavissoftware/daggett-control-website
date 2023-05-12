@@ -1,4 +1,10 @@
 <div id="<%= dom_id testimonial %>">
+
+  <p>
+    <strong>ID:</strong>
+    <%= testimonial.id %>
+  </p>
+
   <p>
     <strong>Name:</strong>
     <%= testimonial.name %>
@@ -22,7 +28,7 @@
   <p>
     <strong>Image:</strong>
     <br/>
-    <%= link_to image_tag(testimonial.image), testimonial.image, :class => "link-exclude" if testimonial.image.attached? %>
+    <%= link_to image_tag(testimonial.image_as_thumbnail), testimonial.image, :class => "link-exclude" if testimonial.image.attached? %>
   </p>
 
   <p>
