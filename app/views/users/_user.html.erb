@@ -39,7 +39,7 @@
   <p>
     <strong>Image:</strong>
     <br/>
-    <%= link_to image_tag(user.image_as_thumbnail), user.image_as_thumbnail, :class => "link-exclude" if user.image.attached? %>
+    <%= link_to image_tag(user.image_as_thumbnail), user.image, :class => "link-exclude" if user.image.attached? %>
   </p>
 
 </div>
