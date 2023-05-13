@@ -20,7 +20,7 @@ export default function ProductsPage() {
   console.log(productLines)
 
   const productLineComponents = productLines.map((productLine) => {
-    return <ProductLineCard key={productLine.id} productLine={productLine} />
+    return <ProductLineCard key={productLine.id} productLine={productLine} api={api} />
   })
 
   return (

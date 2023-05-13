@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def database_home
-    render :template => "/home/home"
+    render :template => "/sessions/new"
   end
 
   private

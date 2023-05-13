@@ -6,6 +6,6 @@ class ProductLine < ApplicationRecord
   validates :image, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 0..(5.megabytes) }
 
   def image_as_thumbnail
-    image.variant(resize_to_limit: [300, 300]).processed
+    image.variant(resize_to_limit: [324, 324]).processed
   end
 end

@@ -2,15 +2,15 @@ import AvatarPlaceholder from "../assets/images/avatar_placeholder.png"
 
 
 
-export default function TestimonialCard({ testimonial }) {
+export default function TestimonialCard({ testimonial, api }) {
   const { name, content, website, image, image_as_thumbnail, product_line } = testimonial
 
   return (
     <div className="card sm:card-side bg-base-100 shadow-xl m-5 p-3 sm:p-0 flex items-center">
       <figure className="w-full max-w-xxs">
         {(image) ? (
-          <a href={image} target="_blank" className="flex">
-            <img src={image_as_thumbnail} alt={name} className="rounded-xl sm:rounded-r-none"/>
+          <a href={`${api}${image}`} target="_blank" className="flex">
+            <img src={`${api}${image_as_thumbnail}`} className="rounded-xl sm:rounded-r-none"/>
           </a>
         ) : (
           <a href={AvatarPlaceholder} target="_blank" className="">

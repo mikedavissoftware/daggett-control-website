@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DaggettControlWebsite</title>
+    <title>Daggett Control Database Editor</title>
+    <%# <link rel="icon" type="image/svg+xml" href="/assets/images/daggett-control-icon-1.png" /> %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
     <h1>Welcome to the Daggett Control Company Website Database Editor!</h1>
     <!-- instead place nav bar here with links to each index-->
-    <h3>The current environment is <%= Rails.env %></h3>
+    <!-- <h3>The current environment is <%= Rails.env %></h3> -->
 
     <%= render :template => "/home/home" %>
 

@@ -16,7 +16,7 @@ export default function TeamMemberCard({ teamMember, api }) {
       <figure className="w-full max-w-xs">
         {(image) ? (
           <a href={`${api}${image}`} target="_blank" className="">
-            <img src={`${api}${image}`} alt={name} className="rounded-xl lg:rounded-r-none"/>
+            <img src={`${api}${image_as_thumbnail}`} alt={name} className="rounded-xl lg:rounded-r-none"/>
           </a>
         ) : (
           <a href={AvatarPlaceholder} target="_blank" className="flex">

@@ -106,3 +106,8 @@ a:not(.link-exclude):active {
 nav {
   text-align: center;
 }
+
+div, img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

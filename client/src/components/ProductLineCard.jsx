@@ -2,9 +2,11 @@ import LogoPlaceholder from "../assets/images/logo-placeholder.png"
 
 
 
-export default function ProductLineCard({ productLine }) {
+export default function ProductLineCard({ productLine, api }) {
 
   const { company, logo, description, website, testimonials, image } = productLine
+
+  console.log(image)
 
   function buttonNewTab(link) {
     window.open(
@@ -17,7 +19,7 @@ export default function ProductLineCard({ productLine }) {
     <div className="card bg-black shadow-xl m-5 image-full items-center hover:border-2">
       <figure className="p-5 mx-auto">
         {(image) ? (
-          <img src={image} alt="Album" className="blur-sm max-h-52"/>
+          <img src={`${api}${image}`} alt="Album" className="blur-sm max-h-52"/>
         ) : (
           <img src={LogoPlaceholder} alt="Album" className="blur-sm max-h-52 hover:blur-none"/>
         )}
