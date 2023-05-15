@@ -1,11 +1,3 @@
 <%= render @product_line %>
 
-<div>
-  <%= link_to "Edit this product line", edit_product_line_path(@product_line) %>
-  <%= link_to "Show data object", "#{product_line_path(@product_line)}.json", target: "_blank" %>
-  <%= link_to "Back to product lines", product_lines_path %>
-
-  <hr style="margin: 50px;" />
-
-  <%= button_to "Destroy this product line", @product_line, method: :delete, data: { "turbo-confirm": "Are you sure?" } %>
-</div>
+<%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: @product_line } %>

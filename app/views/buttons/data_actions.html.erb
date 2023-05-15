@@ -1,0 +1,44 @@
+<div class="center-buttons">
+
+  <% if view.include?("index") || view.include?("edit") %>
+    <%# "Show this..." button %>
+    <%= link_to "Show this #{class_name.class.name.titleize}", class_name, :style => "display: inline-block;" %>
+  <% end %>
+
+  <% if view.exclude?("index") %>
+    <%# "Back to..." button  %>
+    <%= link_to "Back to #{class_name.class.name.titleize}s", public_send("#{class_name.class.name.underscore}s_path"), :style => "display: inline-block;" %>
+  <% end %>
+
+  <%# "Show Data Object" button %>
+  <%= link_to "Show Data Object", "#{public_send("#{class_name.class.name.underscore}_path", class_name)}.json", target: "_blank", :style => "display: inline-block;" %>
+
+  <br>
+
+  <%# If data is User class, with current-user-based restrictions %>
+  <% if class_name.class.name == "User" %>
+    <% if class_name.id == session[:user_id] %>
+      <% if view.exclude?("edit") %>
+        <%# "Edit User" button %>
+        <%= link_to "Edit this #{class_name.class.name.titleize}", public_send("edit_#{class_name.class.name.underscore}_path", class_name), :style => "display: inline-block;" %>
+      <% end %>
+      <%# "Destroy User" button %>
+      <%= link_to "Destroy this #{class_name.class.name.titleize}", public_send("#{class_name.class.name.underscore}_path", class_name), data: { turbo_method: :delete, "turbo-confirm": "Are you sure?" }, :style => "display: inline-block; border-color: red; border-width: 3px;" %>
+    <% end %>
+
+    <% if class_name.id != session[:user_id] && view.exclude?("index") %>
+      <h4>To edit or destroy this user, you must be logged in as this user.</h4>
+    <% end %>
+
+  <%# If data is not User class %>
+  <% else %>
+    <% if view.exclude?("edit") %>
+      <%# "Edit this..." button %>
+      <%= link_to "Edit this #{class_name.class.name.titleize}", public_send("edit_#{class_name.class.name.underscore}_path", class_name), :style => "display: inline-block;" %>
+    <% end %>
+
+    <%# "Destroy this..." button %>
+    <%= link_to "Destroy this #{class_name.class.name.titleize}", public_send("#{class_name.class.name.underscore}_path", class_name), data: { turbo_method: :delete, "turbo-confirm": "Are you sure?" }, :style => "display: inline-block; border-color: red; border-width: 3px;" %>
+  <% end %>
+  
+</div>

@@ -111,3 +111,7 @@ div, img {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.center-buttons {
+  text-align: center;
+}

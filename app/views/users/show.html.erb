@@ -1,22 +1,3 @@
 <%= render @user %>
 
-<div class="user">
-  <% if @user.id == session[:user_id] %>
-    <%= link_to "Edit this user", edit_user_path(@user)%>
-  <% end %>
-
-  <%= link_to "Show data object", "#{user_path(@user)}.json", target: "_blank" %>
-  <%= link_to "Back to users", users_path, :class => "button" %>
-
-  <hr style="margin: 50px;" />
-
-  <% if @user.id == session[:user_id] %>
-    <%= button_to "Log Out", "/logout", method: :delete %>
-    <hr/>
-    <%= button_to "Destroy this user", @user, method: :delete, data: { "turbo-confirm": "Are you sure?" } %>
-  <% else %>
-    <h4>You can't edit or destroy this user unless you're logged in as them.</h4>
-    <h4>If you just created this user and wish to edit:</h4>
-    <%= button_to "Log Out", "/logout", method: :delete, :style => "display: inline-block;" %>
-  <% end %>
-</div>
+<%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: @user } %>

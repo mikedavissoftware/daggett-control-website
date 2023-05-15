@@ -1,7 +1,3 @@
-<% if notice %>
-  <p style="color: green"><%= notice %></p>
-<% end %>
-
 <hr width="15%" />
 
 <%= link_to "Create a new testimonial", new_testimonial_path %>
@@ -13,7 +9,9 @@
 <div id="testimonials">
   <% @testimonials.each do |testimonial| %>
     <%= render testimonial %>
-    <%= link_to "Show this testimonial", testimonial %>
-    <hr width="75%" />
+
+    <%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: testimonial } %>
+
+    <hr width="85%" />
   <% end %>
 </div>

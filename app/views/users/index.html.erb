@@ -9,7 +9,9 @@
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
-    <%= link_to "Show this user", user %>
-    <hr width="75%" />
+
+    <%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: user } %>
+
+    <hr width="85%" />
   <% end %>
 </div>

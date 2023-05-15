@@ -1,10 +1,6 @@
-<% if notice %>
-  <p style="color: green"><%= notice %></p>
-<% end %>
-
 <hr width="15%" />
 
-<%= link_to "Create a new product line", new_product_line_path %>
+<%= link_to "Create a New Product Line", new_product_line_path %>
 
 <h2>...or Browse Your Product Lines Below</h2>
 
@@ -13,7 +9,9 @@
 <div id="product_lines">
   <% @product_lines.each do |product_line| %>
     <%= render product_line %>
-    <%= link_to "Show this product line", product_line %>
-    <hr width="75%" />
+    
+    <%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: product_line } %>
+
+    <hr width="85%" />
   <% end %>
 </div>

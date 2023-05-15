@@ -6,7 +6,4 @@
 
 <hr width="40%" />
 
-<div>
-  <%= link_to "Show this product line", @product_line %> |
-  <%= link_to "Back to product lines", product_lines_path %>
-</div>
+<%= render template: "/buttons/data_actions", :locals => { view: __FILE__, class_name: @product_line } %>
