@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom"
 
 export default function NavBarRegular() {
 
-
-
   return (
     <div className="invisible h-0 md:visible md:h-auto">
       <ul className="menu menu-horizontal bg-base-100 rounded-xl">
