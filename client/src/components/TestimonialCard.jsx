@@ -18,11 +18,11 @@ export default function TestimonialCard({ testimonial, api }) {
           </a>
         )}
       </figure>
-      <div className="card-body sm:text-left">
-        <h2 className="font-bold text-xl">{name}</h2>
-        <h3 className="italic text-lg">{product_line.company}</h3>
+      <div className="text-white card-body sm:text-left">
+        <h2 className="font-bold text-white text-xl">{name}</h2>
+        <h3 className="italic text-white text-lg">{product_line.company}</h3>
         <p>{content}</p>
-        <a href={product_line.website} target="_blank">{product_line.website}</a>
+        <a href={product_line.website} target="_blank" className="text-white underline">{product_line.website}</a>
       </div>
     </div>
   )

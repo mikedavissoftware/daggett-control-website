@@ -24,7 +24,7 @@ export default function Testimonials() {
   })
 
   return (
-    <div>
+    <div className="my-8">
       {testimonialComponents}
     </div>
   )

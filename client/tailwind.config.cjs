@@ -16,6 +16,12 @@ module.exports = {
         'lg-white': '0 0 4px rgb(255 255 255 / 1)',
         'xl-white': '0 0 8px rgb(255 255 255 / 1)',
         '2xl-white': '0 0 16px rgb(255 255 255 / 1)',
+        'sm-dark': '2px 2px 1px rgb(0 0 0 / .8)',
+        'md-dark': '4px 4px 3px rgb(0 0 0 / .8)',
+        'lg-dark': '10px 10px 8px rgb(0 0 0 / .8)',
+        'xl-dark': '20px 20px 13px rgb(0 0 0 / .8)',
+        '2xl-dark': '25px 25px 25px rgb(0 0 0 / .8)',
+        none: '0 0 #0000',
       },
       maxWidth: ({ theme, breakpoints }) => ({
         xxs: '16rem',

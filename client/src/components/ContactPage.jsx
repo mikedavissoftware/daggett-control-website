@@ -68,6 +68,11 @@ export default function ContactPage() {
   return (
     <div>
       <h2 className="text-3xl font-semibold mt-10">Contact Us</h2>
+
+      <p className="my-4">At Daggett Control, we value <strong>relationships</strong> above all. We go above and beyond to provide our customers with the solutions that fit the needs of their business.</p>
+
+      <p className="my-4">And this all starts with you! Please fill out our contact form below and describe your industrial control needs in detail, and we will get back to you as soon as possible!</p>
+
       <h4 className="success">{success}</h4>
       {(errors.length > 0) ? (
         <>

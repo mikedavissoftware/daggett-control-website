@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react"
+import { Link } from "react-router-dom"
 
 import ProductLineCard from "./ProductLineCard"
 import { GlobalContext } from "../App"
@@ -25,10 +26,15 @@ export default function ProductsPage() {
 
   return (
     <div className="max-w-screen-xl mx-auto">
-      <h3 className="text-3xl my-2 mt-6"><strong>BROWSE OUR PRODUCT LINES</strong></h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      <h3 className="text-white text-3xl my-2 mt-6"><strong>BROWSE OUR PRODUCT LINES</strong></h3>
+
+      <p className="text-white my-4">We distribute a wide array of different product lines, to fit all your industrial control needs!</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-4">
         {productLineComponents}
       </div>
+
+      <p className="text-white my-4">To inquire about any of these products, or place an order, please visit our <Link to="/contact" className="font-bold underline">Contact Page</Link>.</p>
     </div>
   )
 }

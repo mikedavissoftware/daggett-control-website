@@ -25,10 +25,10 @@ export default function TeamMemberCard({ teamMember, api }) {
         )}
       </figure>
       <div className="card-body lg:text-left">
-        <h2 className="font-bold text-xl">{name}</h2>
-        <h3 className="italic text-lg">{role}</h3>
+        <h2 className="font-bold text-white text-xl">{name}</h2>
+        <h3 className="italic text-white text-lg">{role}</h3>
         <p>{bio}</p>
-        <a href={website} target="_blank">{website}</a>
+        <a href={website} target="_blank" className="text-white underline">{website}</a>
       </div>
     </div>
   )
