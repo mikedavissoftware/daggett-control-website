@@ -1,12 +1,7 @@
 <div>
-  <nav>
-    <%= link_to "See All Users", users_path, :style => "display: inline-block;" %>
-    <%= link_to "See All Testimonials", testimonials_path, :style => "display: inline-block;" %>
-    <%= link_to "See All Product Lines", product_lines_path, :style => "display: inline-block;" %>
-    <% if session[:user_id] != nil %>
-      <%= link_to "My Account", User.find(session[:user_id]), :style => "display: inline-block;" %>
-    <% else %>
-      <%= link_to "Log In", "/login", :style => "display: inline-block;" %>
-    <% end %>
-  </nav>
+  <% if @current_user %>
+    <h3>It looks like you are logged in already. Please use the navigation bar above to access the database.</h4>
+  <% else %>
+    <%= render :template => "/sessions/new" %>
+  <% end %>
 </div>

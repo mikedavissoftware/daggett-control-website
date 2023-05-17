@@ -5,6 +5,7 @@
     <%= link_to "See All Product Lines", product_lines_path, :style => "display: inline-block;" %>
     <% if session[:user_id] != nil %>
       <%= link_to "My Account", User.find(session[:user_id]), :style => "display: inline-block;" %>
+      <%= link_to "Log Out", "/logout", data: { turbo_method: :delete }, :style => "display: inline-block; border-color: red; border-width: 3px;" %>
     <% else %>
       <%= link_to "Log In", "/login", :style => "display: inline-block;" %>
     <% end %>
