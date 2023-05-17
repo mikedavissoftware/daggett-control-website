@@ -25,7 +25,7 @@ export default function ProductsPage() {
   })
 
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto animate fade">
       <h3 className="text-white text-3xl my-2 mt-6"><strong>BROWSE OUR PRODUCT LINES</strong></h3>
 
       <p className="text-white my-4">We distribute a wide array of different product lines, to fit all your industrial control needs!</p>

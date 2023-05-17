@@ -66,20 +66,20 @@ export default function ContactPage() {
 
 
   return (
-    <div>
-      <h2 className="text-3xl font-semibold mt-10">Contact Us</h2>
+    <div className="animate slide-left">
+      <h3 className="text-white text-3xl my-2 mt-6"><strong>CONTACT US</strong></h3>
 
       <p className="my-4">At Daggett Control, we value <strong>relationships</strong> above all. We go above and beyond to provide our customers with the solutions that fit the needs of their business.</p>
 
       <p className="my-4">And this all starts with you! Please fill out our contact form below and describe your industrial control needs in detail, and we will get back to you as soon as possible!</p>
 
-      <h4 className="success">{success}</h4>
+      <h4 className="text-accent">{success}</h4>
       {(errors.length > 0) ? (
         <>
           {errors.map((error) => {
-            return <h4 className="error">{error}</h4>
+            return <h4 className="text-error">{error}</h4>
           })}
-          <h4 className="error">Please try again or email us directly at <a href='mailto:rondaggett@daggettcontrol.com'>ron@daggettcontrol.com</a>.</h4>
+          <h4 className="text-error">Please try again or email us directly at <a href='mailto:rondaggett@daggettcontrol.com' className="underline font-bold">ron@daggettcontrol.com</a>.</h4>
         </>
       ) : (null)}
       
@@ -109,7 +109,7 @@ export default function ContactPage() {
 
           <div className="grid my-5 max-w-2xl mx-auto justify-items-end">
             <div>
-              <button type="submit" className="bg-gray-500 hover:bg-black">Send</button>
+              <button type="submit" className="bg-accent text-white hover:bg-[#7f7]"><span className="drop-shadow-sm-dark">Send</span></button>
             </div>
           </div>
         </form>

@@ -1,12 +1,39 @@
+import { useRef, useEffect, useState } from "react"
+
 import AvatarPlaceholder from "../assets/images/avatar_placeholder.png"
 
 
 
 export default function TestimonialCard({ testimonial, api }) {
+
   const { name, content, website, image, image_as_thumbnail, product_line } = testimonial
+  
+  // Beginning of viewport code
+  const containerRef = useRef(null)
+  const [ isVisible, setIsVisible ] = useState(false)
+  const callbackFunction = (entries) => {
+    const [ entry ] = entries
+    if (entry.isIntersecting) {
+      setIsVisible(true)
+    }
+  }
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2
+  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options)
+    if (containerRef.current) observer.observe(containerRef.current)
+    
+    return () => {
+      if(containerRef.current) observer.unobserve(containerRef.current)
+    }
+  }, [containerRef, options])
+  // Ending of viewport code
 
   return (
-    <div className="card sm:card-side bg-base-100 shadow-xl m-5 p-3 sm:p-0 flex items-center">
+    <div className={isVisible ? ("card sm:card-side bg-base-100 shadow-xl m-5 p-3 sm:p-0 flex items-center animate slide-left") : ("opacity-0")} ref={containerRef}>
       <figure className="w-full max-w-xxs">
         {(image) ? (
           <a href={`${api}${image}`} target="_blank" className="flex">
