@@ -48,7 +48,7 @@ export default function TeamMemberCard({ teamMember, api }) {
       <div className="card-body lg:text-left">
         <h2 className="font-bold text-white text-xl">{name}</h2>
         <h3 className="italic text-white text-lg">{role}</h3>
-        <p>{bio}</p>
+        <p className="text-white">{bio}</p>
         <a href={website} target="_blank" className="text-white underline">{website}</a>
       </div>
     </div>
