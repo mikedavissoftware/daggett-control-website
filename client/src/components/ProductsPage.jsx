@@ -18,7 +18,6 @@ export default function ProductsPage() {
       setProductLines(productLinesData)
     })
   }, [])
-  console.log(productLines)
 
   const productLineComponents = productLines.map((productLine) => {
     return <ProductLineCard key={productLine.id} productLine={productLine} api={api} />

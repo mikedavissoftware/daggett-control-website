@@ -7,7 +7,6 @@ import HomePage from "./components/HomePage"
 import AboutUsPage from "./components/AboutUsPage"
 import ProductsPage from "./components/ProductsPage"
 import ContactPage from "./components/ContactPage"
-import AccountPage from "./components/AccountPage"
 import Footer from "./components/Footer"
 
 export const GlobalContext = createContext()
@@ -59,9 +58,6 @@ export default function App() {
         </Route>
         <Route path="/contact">
           <ContactPage />
-        </Route>
-        <Route path="/account">
-          <AccountPage />
         </Route>
       </Switch>
 

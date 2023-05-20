@@ -21,6 +21,14 @@ export default function HomePageCarousel() {
   if (imageIndex > 2) setImageIndex(0);
   if (imageIndex < 0) setImageIndex(0);
 
+  const [visibleImage, setVisibleImage] = useState(
+    <img src={images[imageIndex]} className="mx-auto animate fade" />
+  )
+  useEffect(() => {
+    setVisibleImage(<img src={images[imageIndex]} className="opacity-0" />)
+    setVisibleImage(<img src={images[imageIndex]} className="mx-auto animate fade" />)
+  }, [imageIndex])
+
   // Beginning of viewport code
   const containerRef = useRef(null)
   const [ isVisible, setIsVisible ] = useState(false)
@@ -46,14 +54,14 @@ export default function HomePageCarousel() {
   // Ending of viewport code
 
   return (
-    <div className={isVisible ? ("w-full max-w-screen-lg mx-auto drop-shadow-lg m-5") : ("opacity-0")} ref={containerRef}>
+    <div className={isVisible ? ("w-full max-w-screen-lg mx-auto drop-shadow-lg m-5 animate fade") : ("opacity-0")} ref={containerRef}>
       <div className="relative">
-        <img src={images[imageIndex]} className="mx-auto" />
+        {visibleImage}
         <div className="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
-          <a onClick={() => {changeImageIndex(-1)}} className="btn btn-square w-[25px] h-[75px]">❮</a> 
+          <a onClick={() => {changeImageIndex(-1)}} className="btn btn-square w-[25px] h-[75px]">❮</a>
           <a onClick={() => {changeImageIndex(1)}} className="btn btn-square w-[25px] h-[75px]">❯</a>
         </div>
-      </div> 
+      </div>
     </div>
   )
 }
