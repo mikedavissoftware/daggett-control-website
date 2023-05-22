@@ -8,7 +8,7 @@ export default function Footer() {
 
   
   return (
-    <footer className="p-5 bg-slate-600 text-base-content">
+    <footer className="p-5 bg-slate-500 text-base-content">
       <NavBarCollapse />
       <NavBarRegular />
 
@@ -17,7 +17,7 @@ export default function Footer() {
       </div> 
 
       <div className="grid justify-items-center">
-        <hr width="65%" className="border-slate-500"/>
+        <hr width="65%" className="border-slate-600"/>
       </div>
 
       <div>

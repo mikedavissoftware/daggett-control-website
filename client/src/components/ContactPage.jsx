@@ -88,28 +88,28 @@ export default function ContactPage() {
 
           <div className="form-control max-w-2xl mx-auto">
             <label className="label">
-              <span className="label-text">What is your name?</span>
+              <span className="label-text text-black dark:text-white">What is your name?</span>
             </label>
-            <input id="name" name="name" type="text" placeholder="Type name here..." value={formData.name} onChange={handleChange} className="input input-bordered w-full max-w-xs" />
+            <input id="name" name="name" type="text" placeholder="Type name here..." value={formData.name} onChange={handleChange} className="input input-bordered w-full max-w-xs text-white text-lg" />
           </div>
 
           <div className="form-control max-w-2xl mx-auto">
             <label className="label">
-              <span className="label-text">What is your email?</span>
+              <span className="label-text text-black dark:text-white">What is your email?</span>
             </label>
-            <input id="email" name="email" type="text" placeholder="Type email here..." value={formData.email} onChange={handleChange} className="input input-bordered w-full max-w-xs" />
+            <input id="email" name="email" type="text" placeholder="Type email here..." value={formData.email} onChange={handleChange} className="input input-bordered w-full max-w-xs text-white text-lg" />
           </div>
 
           <div className="form-control max-w-2xl mx-auto">
             <label className="label">
-              <span className="label-text">How can we help you?</span>
+              <span className="label-text text-black dark:text-white">How can we help you?</span>
             </label>
-            <textarea id="content" name="content" className="textarea textarea-bordered h-48" placeholder="Type message here..." value={formData.content} onChange={handleChange} ></textarea>
+            <textarea id="content" name="content" className="textarea textarea-bordered h-48 text-white text-lg" placeholder="Type message here..." value={formData.content} onChange={handleChange} ></textarea>
           </div>
 
           <div className="grid my-5 max-w-2xl mx-auto justify-items-end">
             <div>
-              <button type="submit" className="bg-accent text-white hover:bg-[#7f7]"><span className="drop-shadow-sm-dark">Send</span></button>
+              <button type="submit" className="bg-accent text-white hover:bg-[#7f7] hover:text-black"><span className="drop-shadow-sm-dark">Send</span></button>
             </div>
           </div>
         </form>

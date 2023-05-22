@@ -10,7 +10,7 @@ export default function Header() {
 
 
   return (
-    <header className="p-5 bg-slate-600 text-base-content">
+    <header className="p-5 bg-slate-500 text-base-content">
       <div>
         <img src={Logo} className="w-full md:max-w-3xl mx-auto drop-shadow-md mb-2"/>
       </div>
