@@ -66,7 +66,7 @@ export default function ContactPage() {
 
 
   return (
-    <div className="max-w-screen-xl animate slide-left p-6">
+    <div className="max-w-screen-xl mx-auto animate slide-left p-6">
       <h3 className="text-3xl"><strong>CONTACT US</strong></h3>
 
       <p className="my-4">At Daggett Control, we value <strong>relationships</strong> above all. We go above and beyond to provide our customers with the solutions that fit the needs of their business.</p>

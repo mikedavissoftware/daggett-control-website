@@ -18,8 +18,9 @@ export default function HomePageCarousel() {
   const changeImageIndex = (amount) => {
     setImageIndex(imageIndex + amount)
   }
+  console.log(imageIndex)
   if (imageIndex > 2) setImageIndex(0);
-  if (imageIndex < 0) setImageIndex(0);
+  if (imageIndex < 0) setImageIndex(2);
 
   const [visibleImage, setVisibleImage] = useState(
     <img src={images[imageIndex]} className="mx-auto animate fade" />
@@ -54,7 +55,7 @@ export default function HomePageCarousel() {
   // Ending of viewport code
 
   return (
-    <div className={isVisible ? ("w-full max-w-screen-lg mx-auto drop-shadow-lg m-5 animate fade") : ("opacity-0")} ref={containerRef}>
+    <div className={isVisible ? ("w-full max-w-screen-lg mx-auto drop-shadow-lg m-5 animate fade h-fit") : ("opacity-0")} ref={containerRef}>
       <div className="relative">
         {visibleImage}
         <div className="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2">
