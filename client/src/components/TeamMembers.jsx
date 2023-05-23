@@ -13,7 +13,7 @@ export default function TeamMembers() {
     fetch(`${api}/users.json`)
     .then(r => r.json())
     .then(teamMembersData => {
-      setTeamMembers(teamMembersData)
+      setTeamMembers(teamMembersData.sort((a, b) => a.id - b.id))
     })
   }, [])
 

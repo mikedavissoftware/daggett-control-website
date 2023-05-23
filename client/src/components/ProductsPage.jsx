@@ -15,7 +15,7 @@ export default function ProductsPage() {
     fetch(`${api}/product_lines.json`)
     .then(r => r.json())
     .then(productLinesData => {
-      setProductLines(productLinesData)
+      setProductLines(productLinesData.sort((a, b) => (a.company > b.company) ? 1 : -1))
     })
   }, [])
 

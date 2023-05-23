@@ -14,7 +14,7 @@ export default function Testimonials() {
     fetch(`${api}/testimonials.json`)
     .then(r => r.json())
     .then(testimonialsData => {
-      setTestimonials(testimonialsData)
+      setTestimonials(testimonialsData.sort((a, b) => (a.name > b.name) ? 1 : -1))
     })
   }, [])
 
