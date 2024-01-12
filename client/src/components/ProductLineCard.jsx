@@ -39,7 +39,7 @@ export default function ProductLineCard({ productLine, api }) {
   // Ending of viewport code
 
   return (
-    <div className={isVisible ? ("card bg-white shadow-xl m-5 image-full items-center border-2 border-secondary border-opacity-0 hover:border-opacity-100 hover:drop-shadow-lg-white hover:scale-105 duration-150 animate slide-up") : ("opacity-0")} ref={containerRef}>
+    <div className={isVisible ? ("card bg-white dark:bg-white shadow-xl m-5 image-full items-center border-2 border-secondary border-opacity-0 hover:border-opacity-100 hover:drop-shadow-lg-white hover:scale-105 duration-150 animate slide-up") : ("opacity-0")} ref={containerRef}>
       <figure className="mx-auto">
         {(image) ? (
           <img src={`${api}${image}`} alt={company} className="blur-[1px] w-full opacity-40"/>
