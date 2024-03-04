@@ -4,7 +4,7 @@
 
 ## Front End:
 
-!["Front End Screenshot"](public/Daggett%20Control%20FINAL.gif)
+!["Front End Screenshot"](client/public/dcc-project-short-COMP.gif)
 
 This is a website create for an industrial control company, Daggett Control Company, LLC.
 
