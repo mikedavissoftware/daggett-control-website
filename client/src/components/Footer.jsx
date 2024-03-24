@@ -6,6 +6,9 @@ import Logo from "../assets/daggett-control-logo-1.png"
 
 export default function Footer() {
 
+  const today = new Date()
+
+  const year = today.getFullYear()
   
   return (
     <footer className="p-5 bg-slate-500 text-base-content">
@@ -22,7 +25,7 @@ export default function Footer() {
 
       <div>
         <p className="mt-3">
-          Copyright © 2023 - All rights reserved by Daggett Control Company, LLC
+          Copyright © {year} - All rights reserved by Daggett Control Company, LLC
         </p>
       </div>
     </footer>
