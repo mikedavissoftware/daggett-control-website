@@ -71,7 +71,17 @@ export default function ContactPage() {
 
       <p className="my-4">At Daggett Control, we value <strong>relationships</strong> above all. We go above and beyond to provide our customers with the solutions that fit the needs of their business.</p>
 
-      <p className="my-4">And this all starts with you! Please fill out our contact form below and describe your industrial control needs in detail, and we will get back to you as soon as possible!</p>
+      <p className="my-4">And this all starts with you! If you know who you'd like to get in touch with, or simply give us a phone call:</p>
+
+      <h3>Phone: <a href="tel:+3035066201" className="font-bold underline">(303) 506-6201</a></h3>
+
+      <h3>Owner & Sales Manager: <a href="mailto:ron@daggettcontrol.com" className="font-bold underline">ron@daggettcontrol.com</a></h3>
+
+      <h3>Territory Manager: <a href="mailto:kira@daggettcontrol.com" className="font-bold underline">kira@daggettcontrol.com</a></h3>
+
+      <h3>Inside Sales & Accounting: <a href="mailto:stephanie@daggettcontrol.com" className="font-bold underline">stephanie@daggettcontrol.com</a></h3>
+
+      <p className="my-4">...or if you'd like to use our contact form, please use the one below and describe your industrial control needs in detail. We will get back to you as soon as possible!</p>
 
       <h4 className="text-accent">{success}</h4>
       {(errors.length > 0) ? (
