@@ -4,18 +4,9 @@ import TeamMemberCard from "./TeamMemberCard"
 import { GlobalContext } from "../App"
 
 
-export default function TeamMembers() {
+export default function TeamMembers({ teamMembers }) {
 
   const { api } = useContext(GlobalContext)
-
-  const [teamMembers, setTeamMembers] = useState([])
-  useEffect(() => {
-    fetch(`${api}/users.json`)
-    .then(r => r.json())
-    .then(teamMembersData => {
-      setTeamMembers(teamMembersData.sort((a, b) => a.id - b.id))
-    })
-  }, [])
 
   const teamMemberComponents = teamMembers.map((teamMember) => {
     return <TeamMemberCard key={teamMember.id} teamMember={teamMember} api={api} />

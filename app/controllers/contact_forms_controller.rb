@@ -3,7 +3,6 @@ class ContactFormsController < ApplicationController
   before_action :initialize_errors
   before_action :initialize_symbols
 
-
   def create
     @contact_form = ContactForm.new(contact_form_params)
 

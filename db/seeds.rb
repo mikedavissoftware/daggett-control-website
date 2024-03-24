@@ -47,15 +47,15 @@ end
 
 puts "Creating Testimonials..."
 testimonial_amount = product_amount * 3
-testimonial_amount.times do
-  Testimonial.create(
-    name: Faker::Name.name,
-    content: Faker::Lorem.paragraph(sentence_count: 3),
-    website: "http://website.com",
-    x_offset: 0,
-    y_offset: 0,
-    product_line_id: rand(1..product_amount)
-  )
-end
+# testimonial_amount.times do
+#   Testimonial.create(
+#     name: Faker::Name.name,
+#     content: Faker::Lorem.paragraph(sentence_count: 3),
+#     website: "http://website.com",
+#     x_offset: 0,
+#     y_offset: 0,
+#     product_line_id: rand(1..product_amount)
+#   )
+# end
 
 puts "Seeding Finished!"
