@@ -22,10 +22,14 @@ export default function Footer() {
       <div className="grid justify-items-center">
         <hr width="65%" className="border-slate-600"/>
       </div>
+      
 
       <div>
         <p className="mt-3">
           Copyright © {year} - All rights reserved by Daggett Control Company, LLC
+        </p>
+        <p className="mt-3">
+          Issues with the site? Send an email to the site developer <a href="mailto:mike@daggettcontrol.com"  className="font-bold underline">mike@daggettcontrol.com</a>.
         </p>
       </div>
     </footer>

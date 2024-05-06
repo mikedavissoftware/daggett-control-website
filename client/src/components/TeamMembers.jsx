@@ -8,7 +8,11 @@ export default function TeamMembers({ teamMembers }) {
 
   const { api } = useContext(GlobalContext)
 
-  const teamMemberComponents = teamMembers.map((teamMember) => {
+  const filteredTeamMembers = teamMembers.filter((teamMember) => {
+    return teamMember.username !== "mike"
+  })
+
+  const teamMemberComponents = filteredTeamMembers.map((teamMember) => {
     return <TeamMemberCard key={teamMember.id} teamMember={teamMember} api={api} />
   })
 
