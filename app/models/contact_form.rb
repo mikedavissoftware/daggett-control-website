@@ -9,8 +9,8 @@ class ContactForm < MailForm::Base
   def headers
     { 
       #this is the subject for the email generated, it can be anything you want
-      subject: "Contact Form",
-      to: "mikedavissoftware@gmail.com",
+      subject: "Contact Form Submission",
+      to: "stephanie@daggettcontrol.com",
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
