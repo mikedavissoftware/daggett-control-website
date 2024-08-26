@@ -29,7 +29,7 @@ export default function Footer() {
           Copyright © {year} - All rights reserved by Daggett Control Company, LLC
         </p>
         <p className="mt-3">
-          Issues with the site? Send an email to the site developer <a href="mailto:mike@daggettcontrol.com"  className="font-bold underline">mike@daggettcontrol.com</a>.
+          Issues with the site? Send an email to the site developer <a href="mailto:mikedavissoftware@gmail.com"  className="font-bold underline">mikedavissoftware@gmail.com</a>.
         </p>
       </div>
     </footer>

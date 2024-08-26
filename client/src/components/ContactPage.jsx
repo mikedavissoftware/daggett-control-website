@@ -77,7 +77,7 @@ export default function ContactPage() {
 
       <h3>Owner & Sales Manager: <a href="mailto:ron@daggettcontrol.com" className="font-bold underline">ron@daggettcontrol.com</a></h3>
 
-      <h3>Territory Manager: <a href="mailto:kira@daggettcontrol.com" className="font-bold underline">kira@daggettcontrol.com</a></h3>
+      <h3>Territory Manager: <a href="mailto:daylon@daggettcontrol.com" className="font-bold underline">daylon@daggettcontrol.com</a></h3>
 
       <h3>Inside Sales & Accounting: <a href="mailto:stephanie@daggettcontrol.com" className="font-bold underline">stephanie@daggettcontrol.com</a></h3>
 
